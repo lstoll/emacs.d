@@ -2,7 +2,8 @@
 
 ;; Manually set PATH for use by eshell, rspec-mode, etc.
 (let ((path))
-  (setq path (concat "/opt/ruby-enterprise/bin:"
+  (setq path (concat "~/.gem/ruby/1.8/bin:"
+                     "/opt/ruby-enterprise/bin:"
                      "~/bin:"
                      "~/src/homebrew/bin:"
                      "/usr/local/bin:"
@@ -34,6 +35,11 @@
 ;; backed up in the corresponding directory. Emacs will mkdir it if necessary.)
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
+
+;; Makes load time faster.
+(defun byte-recompile-home ()
+  (interactive)
+  (byte-recompile-directory "~/.emacs.d" 0))
 
 ;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
