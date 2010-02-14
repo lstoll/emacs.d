@@ -3,7 +3,6 @@
 ;; Manually set PATH for use by eshell, rspec-mode, etc.
 (let ((path))
   (setq path (concat "~/.gem/ruby/1.8/bin:"
-                     "/opt/ruby-enterprise/bin:"
                      "~/bin:"
                      "~/src/homebrew/bin:"
                      "/usr/local/bin:"
