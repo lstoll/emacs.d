@@ -305,5 +305,11 @@
 ; I have better with error handles (server-start)
 
 ;; Activate theme
-(load (concat dotfiles-dir "topfunky-theme.el"))
-(color-theme-topfunky)
+;(load (concat dotfiles-dir "topfunky-theme.el"))
+;(color-theme-topfunky)
+;
+; Load crafter's twighlight
+(load (concat dotfiles-dir  "vendor/twilight-emacs/color-theme-twilight.el"))
+(color-theme-twilight)
+
+
