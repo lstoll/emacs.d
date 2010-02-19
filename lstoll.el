@@ -1,9 +1,10 @@
 ;; DESCRIPTION: my settings
 ; always start the server
 ; This is my first elisp. I hope it's OK
-(condition-case nil
-  (server-start)
-  (error nil))
+; Doing this machine-specific now
+;(condition-case nil
+;  (server-start)
+;  (error nil))
 
 
 ;; DESCRIPTION: topfunky settings
@@ -310,6 +311,18 @@
 ;
 ; Load crafter's twighlight
 (load (concat dotfiles-dir  "vendor/twilight-emacs/color-theme-twilight.el"))
-(color-theme-twilight)
+;(color-theme-twilight)
+; vibrant ink, perjaps?
+(load (concat dotfiles-dir "vendor/color-theme-vibrant-ink/color-theme-vibrant-ink.el"))
+(color-theme-vibrant-ink)
 
+; yaml mode
 
+(load (concat dotfiles-dir "vendor/yaml-mode/yaml-mode.el"))
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+                                        ; Auto indent
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
