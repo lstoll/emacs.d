@@ -349,3 +349,12 @@
 (add-hook 'after-make-window-system-frame-hooks 'color-theme-vibrant-ink)
 (add-hook 'after-make-console-frame-hooks 'color-theme-tty-dark)
 
+
+
+; JS2
+(load (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+; needs to be compiled
+;(byte-compile-file (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
+
