@@ -18,7 +18,6 @@
 ;                     "/usr/bin:"
 ;                     "/bin"))
 ;  (setenv "PATH" path))
-
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
 ;; Save backups in one place
@@ -357,4 +356,5 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 ; needs to be compiled
 ;(byte-compile-file (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
+
 
