@@ -357,4 +357,10 @@
 ; needs to be compiled
 ;(byte-compile-file (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
 
-
+;; (load (concat dotfiles-dir "vendor/multi-term.el"))
+(require 'multi-term)
+(setq multi-term-program "/bin/bash")
+; set the colors
+(custom-set-variables
+     '(term-default-bg-color "#151515")    ;; background color (match theme)
+     '(term-default-fg-color "#ffffff"))   ;; foreground color (white)
