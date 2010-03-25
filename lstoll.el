@@ -77,17 +77,17 @@
 (global-set-key [f5] 'refresh-file)
 
 ;; Snippets
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet.el"))
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
+;(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet.el"))
+;(require 'yasnippet)
+;(yas/initialize)
+;(yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
 
 ;; Commands
 (require 'unbound)
 
 ;; Minor Modes
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
-(require 'textmate)
+;(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
+;(require 'textmate)
 (textmate-mode)
 (require 'whitespace)
 
@@ -162,16 +162,16 @@
 ;; dabbrev-case-fold-search for case-sensitive search
 
 ;; Rinari
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/jump.el"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
-(require 'rinari)
-(define-key rinari-minor-mode-map [(control meta shift down)] 'rinari-find-rspec)
-(define-key rinari-minor-mode-map [(control meta shift left)] 'rinari-find-controller)
-(define-key rinari-minor-mode-map [(control meta shift up)] 'rinari-find-model)
-(define-key rinari-minor-mode-map [(control meta shift right)] 'rinari-find-view)
+;(add-to-list 'load-path (concat dotfiles-dir "/vendor/jump.el"))
+;(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
+;(require 'rinari)
+;(define-key rinari-minor-mode-map [(control meta shift down)] 'rinari-find-rspec)
+;(define-key rinari-minor-mode-map [(control meta shift left)] 'rinari-find-controller)
+;(define-key rinari-minor-mode-map [(control meta shift up)] 'rinari-find-model)
+;(define-key rinari-minor-mode-map [(control meta shift right)] 'rinari-find-view)
 
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
-(require 'rspec-mode)
+;(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
+;(require 'rspec-mode)
 
 ;; Custom task for PeepCode publishing
 (defun rake-generate-html ()
@@ -204,14 +204,14 @@
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
 
-(require 'haml-mode)
+;(require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-(define-key haml-mode-map [(control meta down)] 'haml-forward-sexp)
-(define-key haml-mode-map [(control meta up)] 'haml-backward-sexp)
-(define-key haml-mode-map [(control meta left)] 'haml-up-list)
-(define-key haml-mode-map [(control meta right)] 'haml-down-list)
+;(define-key haml-mode-map [(control meta down)] 'haml-forward-sexp)
+;(define-key haml-mode-map [(control meta up)] 'haml-backward-sexp)
+;(define-key haml-mode-map [(control meta left)] 'haml-up-list)
+;(define-key haml-mode-map [(control meta right)] 'haml-down-list)
 
-(require 'sass-mode)
+;(require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
 (add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
@@ -351,8 +351,8 @@
 
 
 ; JS2
-(load (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
-(autoload 'js2-mode "js2-mode" nil t)
+;(load (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
+;(autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 ; needs to be compiled
 ;(byte-compile-file (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
