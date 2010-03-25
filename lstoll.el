@@ -1,23 +1,15 @@
 ;; DESCRIPTION: my settings
-; always start the server
-; This is my first elisp. I hope it's OK
-; Doing this machine-specific now
-;(condition-case nil
-;  (server-start)
-;  (error nil))
-
-
-;; DESCRIPTION: topfunky settings
 
 ;; Manually set PATH for use by eshell, rspec-mode, etc.
-;(let ((path))
-;  (setq path (concat "~/.gem/ruby/1.8/bin:"
-;                     "~/bin:"
-;                     "~/src/homebrew/bin:"
-;                     "/usr/local/bin:"
-;                     "/usr/bin:"
-;                     "/bin"))
-;  (setenv "PATH" path))
+(let ((path))
+  (setq path (concat "~/.rvm/rubies/ruby-1.9.1-p378/bin/:"
+                     "~/sw/bin:"
+                     "/usr/local/bin:"
+                     "/usr/bin:"
+                     "/bin"))
+  (setenv "PATH" path))
+
+; vendor is on load path
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 
 ;; Save backups in one place
@@ -48,19 +40,9 @@
   (interactive)
   (byte-recompile-directory "~/.emacs.d" 0))
 
-;;(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
+; Tabs
 (setq default-tab-width 4)
 (setq tab-width 4)
-
-;; Open current file in TextMate.
-(defun textmate-open-buffer ()
-  (interactive)
-  (shell-command-to-string (concat "mate " buffer-file-name)))
-
-
-;; Clojure
-;;(eval-after-load 'clojure-mode '(clojure-slime-config))
 
 ;; Plain Text
 ;;; Stefan Monnier <foo at acm.org>. It is the opposite of
@@ -71,39 +53,23 @@
   (let ((fill-column (point-max)))
     (fill-paragraph nil)))
 
+; Refresh the file.
 (defun refresh-file ()
   (interactive)
   (revert-buffer t t t))
 (global-set-key [f5] 'refresh-file)
 
 ;; Snippets
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet.el"))
-;(require 'yasnippet)
-;(yas/initialize)
 ;(yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
 
 ;; Commands
 (require 'unbound)
 
 ;; Minor Modes
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate.el"))
-;(require 'textmate)
 (textmate-mode)
 (require 'whitespace)
 
 ;; Major Modes
-
-;; Python
-;; Live cyclomatic complexity script from @garybernhardt
-;; http://blog.extracheese.org/2009/11/refactoring_a_cyclomatic_complexity_script.html
-;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/pycomplexity"))
-;; (require 'linum)
-;; (require 'pycomplexity)
-;; (add-hook 'python-mode-hook
-;;           (function (lambda ()
-;;                       (flymake-mode)
-;;                       (linum-mode)
-;;                       (pycomplexity-mode))))
 
 ;; ruby-mode
 (require 'topfunky-sinatra)
@@ -151,6 +117,7 @@
         ;;        try-expand-whole-kill
         ))
 
+; Tab indexts or completes, depending on where it's at.
 (defun indent-or-complete ()
   (interactive)
   (if (and (looking-at "$") (not (looking-back "^\\s-*")))
@@ -159,33 +126,9 @@
 (add-hook 'find-file-hooks (function (lambda ()
                                        (local-set-key (kbd "TAB") 'indent-or-complete))))
 
-;; dabbrev-case-fold-search for case-sensitive search
-
-;; Rinari
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/jump.el"))
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
-;(require 'rinari)
-;(define-key rinari-minor-mode-map [(control meta shift down)] 'rinari-find-rspec)
-;(define-key rinari-minor-mode-map [(control meta shift left)] 'rinari-find-controller)
-;(define-key rinari-minor-mode-map [(control meta shift up)] 'rinari-find-model)
-;(define-key rinari-minor-mode-map [(control meta shift right)] 'rinari-find-view)
-
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
-;(require 'rspec-mode)
-
-;; Custom task for PeepCode publishing
-(defun rake-generate-html ()
-  (interactive)
-  (rake "generate_html"))
-(global-set-key [(meta shift r)] 'rake-generate-html)
-
-
-(autoload 'applescript-mode "applescript-mode" "major mode for editing AppleScript source." t)
-(setq auto-mode-alist
-      (cons '("\\.applescript$" . applescript-mode) auto-mode-alist))
-
 ;; org-mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+
 ;; Override
 (add-hook 'org-mode-hook
           (lambda()
@@ -204,55 +147,20 @@
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
 
-;(require 'haml-mode)
+; mode settings
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-;(define-key haml-mode-map [(control meta down)] 'haml-forward-sexp)
-;(define-key haml-mode-map [(control meta up)] 'haml-backward-sexp)
-;(define-key haml-mode-map [(control meta left)] 'haml-up-list)
-;(define-key haml-mode-map [(control meta right)] 'haml-down-list)
-
-;(require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
 (add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
 
-;; XCODE
-(require 'objc-c-mode)
-
-;; (setq c-default-style "bsd"
-;;       c-basic-offset 2)
-
 (require 'cc-menus)
-
-(require 'xcode)
-(define-key objc-mode-map [(meta r)] 'xcode-compile)
-(define-key objc-mode-map [(meta K)] 'xcode-clean)
-(add-hook 'c-mode-common-hook
-          (lambda()
-            (local-set-key  [(meta O)] 'ff-find-other-file)))
-(add-hook 'c-mode-common-hook
-          (lambda()
-            (local-set-key (kbd "C-c <right>") 'hs-show-block)
-            (local-set-key (kbd "C-c <left>")  'hs-hide-block)
-            (local-set-key (kbd "C-c <up>")    'hs-hide-all)
-            (local-set-key (kbd "C-c <down>")  'hs-show-all)
-            (hs-minor-mode t)))         ; Hide and show blocks
-(add-to-list 'auto-mode-alist '("\\.h\\'" . objc-mode))
-(require 'objj-mode)
-
-;; gist
-(require 'gist)
-
-;; Mercurial
-;;(require 'mercurial)
 
 ;; Color Themes
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 (require 'color-theme)
 (color-theme-initialize)
 
-;; Functions
-
+;; Show line numbers?
 (require 'line-num)
 
 ;; Full screen toggle
@@ -266,35 +174,15 @@
 
 ;; Keyboard
 
-;; Split Windows
-(global-set-key [f6] 'split-window-horizontally)
-(global-set-key [f7] 'split-window-vertically)
-(global-set-key [f8] 'delete-window)
-
-;; Some Mac-friendly key counterparts
-(global-set-key (kbd "M-s") 'save-buffer)
-(global-set-key (kbd "M-z") 'undo)
-
 ;; Keyboard Overrides
 (define-key textile-mode-map (kbd "M-s") 'save-buffer)
 (define-key text-mode-map (kbd "M-s") 'save-buffer)
 
-(global-set-key [(meta up)] 'beginning-of-buffer)
-(global-set-key [(meta down)] 'end-of-buffer)
-
-(global-set-key [(meta shift right)] 'ido-switch-buffer)
-(global-set-key [(meta shift up)] 'recentf-ido-find-file)
-(global-set-key [(meta shift down)] 'ido-find-file)
+; maybe?
 (global-set-key [(meta shift left)] 'magit-status)
 
 (global-set-key [(control shift left)] 'previous-buffer)
 (global-set-key [(control shift right)] 'next-buffer)
-
-(global-set-key [(meta H)] 'delete-other-windows)
-
-(global-set-key [(meta D)] 'backward-kill-word) ;; (meta d) is opposite
-
-(global-set-key [(meta N)] 'cleanup-buffer)
 
 (global-set-key [(control \])] 'indent-rigidly)
 
@@ -302,30 +190,22 @@
 
 (prefer-coding-system 'utf-8)
 
-; I have better with error handles (server-start)
-
-;; Activate theme
-;(load (concat dotfiles-dir "topfunky-theme.el"))
-;(color-theme-topfunky)
-;
-; Load crafter's twighlight
-(load (concat dotfiles-dir  "vendor/twilight-emacs/color-theme-twilight.el"))
-;(color-theme-twilight)
-; vibrant ink, perjaps?
-(load (concat dotfiles-dir "vendor/color-theme-vibrant-ink/color-theme-vibrant-ink.el"))
-
 ; yaml mode
 
-(load (concat dotfiles-dir "vendor/yaml-mode/yaml-mode.el"))
-(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
                                         ; Auto indent
-(add-hook 'yaml-mode-hook
-      '(lambda ()
-        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+;(add-hook 'yaml-mode-hook
+;      '(lambda ()
+;        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-; trying better theme handling. From http://emacs-fu.blogspot.com/2009/03/color-theming.html
+;; trying better theme handling. From http://emacs-fu.blogspot.com/2009/03/color-theming.html
+
+; load vibrant ink
+(load (concat dotfiles-dir "vendor/color-theme-vibrant-ink/color-theme-vibrant-ink.el"))
+
+; This all makes sure we load the color theme in gui, and something
+; nicer in console.
 (defvar after-make-console-frame-hooks '()
 "Hooks to run after creating a new TTY frame")
 (defvar after-make-window-system-frame-hooks '()
@@ -349,17 +229,10 @@
 (add-hook 'after-make-console-frame-hooks 'color-theme-tty-dark)
 
 
-
-; JS2
-;(load (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
-;(autoload 'js2-mode "js2-mode" nil t)
+; File associations
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-; needs to be compiled
-;(byte-compile-file (concat dotfiles-dir "vendor/js2-mode/js2-mode.el"))
 
-;; (load (concat dotfiles-dir "vendor/multi-term.el"))
-(require 'multi-term)
-(setq multi-term-program "/bin/bash")
+
 ; set the colors
 (custom-set-variables
      '(term-default-bg-color "#151515")    ;; background color (match theme)
