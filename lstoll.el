@@ -191,13 +191,15 @@
 (prefer-coding-system 'utf-8)
 
 ; yaml mode
+(load (concat dotfiles-dir "vendor/yaml-mode/yaml-mode.el"))
 
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-                                        ; Auto indent
-;(add-hook 'yaml-mode-hook
-;      '(lambda ()
-;        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+; Auto indent
+(add-hook 'yaml-mode-hook
+      '(lambda ()
+        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; trying better theme handling. From http://emacs-fu.blogspot.com/2009/03/color-theming.html
 

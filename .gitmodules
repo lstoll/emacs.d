@@ -1,0 +1,3 @@
+[submodule "vendor/yaml-mode"]
+	path = vendor/yaml-mode
+	url = git://github.com/yoshiki/yaml-mode.git
