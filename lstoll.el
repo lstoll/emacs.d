@@ -59,7 +59,10 @@
 (global-set-key [f5] 'refresh-file)
 
 ;; Snippets
-;(yas/load-directory (concat dotfiles-dir "/vendor/yasnippet.el/snippets"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet-0.6.1c"))
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory (concat dotfiles-dir "/snippets"))
 
 ;; Commands
 (require 'unbound)
@@ -238,3 +241,6 @@
 
 ; New - language specific files
 (require 'lstoll/python)
+
+(require 'ruby-electric)
+;(add-hook 'ruby-mode-hook 'ruby-electric)
