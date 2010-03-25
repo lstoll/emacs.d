@@ -41,7 +41,6 @@
   (byte-recompile-directory "~/.emacs.d" 0))
 
 ; Tabs
-(setq default-tab-width 4)
 (setq tab-width 4)
 
 ;; Plain Text
@@ -78,7 +77,7 @@
 (require 'ruby-complexity)
 (add-hook 'ruby-mode-hook
           (function (lambda ()
-                      (flymake-mode)
+                      (flymake-mode t)
                       (linum-mode)
                       (ruby-complexity-mode)
                       )))
@@ -126,9 +125,6 @@
 (add-hook 'find-file-hooks (function (lambda ()
                                        (local-set-key (kbd "TAB") 'indent-or-complete))))
 
-;; org-mode
-(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
-
 ;; Override
 (add-hook 'org-mode-hook
           (lambda()
@@ -141,17 +137,8 @@
 
 
 (require 'textile-mode)
-(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
-
 (autoload 'markdown-mode "markdown-mode.el"
-  "Major mode for editing Markdown files" t)
-(add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
-
-; mode settings
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
-
-(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
+          "Major mode for editing Markdown files" t)
 
 (require 'cc-menus)
 
@@ -193,9 +180,6 @@
 ; yaml mode
 (load (concat dotfiles-dir "vendor/yaml-mode/yaml-mode.el"))
 
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-
 ; Auto indent
 (add-hook 'yaml-mode-hook
       '(lambda ()
@@ -233,9 +217,24 @@
 
 ; File associations
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.sake\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
+(add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 
 
 ; set the colors
 (custom-set-variables
      '(term-default-bg-color "#151515")    ;; background color (match theme)
      '(term-default-fg-color "#ffffff"))   ;; foreground color (white)
+
+; Ruby flymake
+;(require 'flymake-ruby)
+;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+
+; New - language specific files
+(require 'lstoll/python)
