@@ -244,3 +244,6 @@
 
 (require 'ruby-electric)
 (add-hook 'ruby-mode-hook 'ruby-electric-mode)
+
+; nxhtml mode
+(load "vendor/nxhtml/autostart.el")
