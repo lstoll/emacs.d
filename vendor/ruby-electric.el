@@ -190,3 +190,12 @@ strings. Note that you must have Font Lock enabled."
 
 
 (provide 'ruby-electric)
+
+; patch to get ruby-insert-end
+; from http://groups.google.com/group/emacs-on-rails/browse_thread/thread/ae87fc797822bf3
+(defun ruby-insert-end () 
+    "Insert \"end\" at point and reindent current line." 
+      (interactive) 
+        (insert "end") 
+          (ruby-indent-line t) 
+            (end-of-line)) 

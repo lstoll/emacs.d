@@ -243,4 +243,4 @@
 (require 'lstoll/python)
 
 (require 'ruby-electric)
-;(add-hook 'ruby-mode-hook 'ruby-electric)
+(add-hook 'ruby-mode-hook 'ruby-electric-mode)
