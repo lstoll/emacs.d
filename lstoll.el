@@ -247,3 +247,6 @@
 
 ; nxhtml mode
 (load "vendor/nxhtml/autostart.el")
+
+; Vagrant file is ruby
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
