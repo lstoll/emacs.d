@@ -4,3 +4,6 @@
 [submodule "vendor/nxhtml"]
 	path = vendor/nxhtml
 	url = git://github.com/emacsmirror/nxhtml.git
+[submodule "vendor/textmate"]
+	path = vendor/textmate
+	url = git://github.com/defunkt/textmate.el.git
