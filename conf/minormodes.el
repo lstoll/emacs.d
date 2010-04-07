@@ -26,12 +26,28 @@
         ;;        try-expand-whole-kill
         ))
 
-;; load misc modes
+;; textmate mode
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
+(require 'textmate)
 (textmate-mode)
+
+;; load misc modes
 (require 'whitespace)
 
 ;; IMenu support for CC mode
 (require 'cc-menus)
+
+;; Ruby compilation
+(require 'ruby-compilation)
+
+;; GIST
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/gist"))
+(require 'gist)
+
+;; MaGIT
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/magit"))
+(require 'magit)
+
 
 (provide 'conf/minormodes)
 ;;; starter-kit-defuns.el ends here

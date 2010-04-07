@@ -2,6 +2,9 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
+;; ruby mode and inf-ruby from ruby svn
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-emacs"))
+
 (eval-after-load 'ruby-mode
   '(progn
      (require 'ruby-compilation)
@@ -107,10 +110,18 @@ exec-to-string command, but it works and seems fast"
 ; Vagrant file is ruby
 (add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 
-; Ruby flymake
-;(require 'flymake-ruby)
-;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
-
+; Rinari
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/jump"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
+(require 'rinari)
+;(setq
+;      nxhtml-global-minor-mode t
+;      mumamo-chunk-coloring 'submode-colored
+;      nxhtml-skip-welcome t
+;      indent-region-mode t
+;      rng-nxml-auto-validate-flag nil
+;      nxml-degraded t)
+; 
 
 (provide 'conf/ruby)
 ;; starter-kit-ruby.el ends here

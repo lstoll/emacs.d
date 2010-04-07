@@ -37,12 +37,6 @@
 (require 'ansi-color)
 (require 'recentf)
 
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
-
-
 ;; Load starter kit function defs
 (require 'conf/starter-kit-defuns)
 
@@ -61,14 +55,17 @@
 (require 'conf/starter-kit-misc)
 (require 'conf/registers)
 (require 'conf/eshell)
-(require 'conf/minormodes)
 (require 'conf/ruby)
+(require 'conf/hamlsass)
 (require 'conf/js)
 (require 'conf/misc)
 (require 'conf/orgmode)
 (require 'conf/colorthemes)
 (require 'conf/yaml)
 (require 'conf/nxhtml)
+(require 'conf/fileassoc)
+; I think this needs to be last, to ensure all deps loaded
+(require 'conf/minormodes)
 
 (provide 'init)
 ;;; init.el ends here
