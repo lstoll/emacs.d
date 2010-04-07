@@ -24,5 +24,5 @@
                   '("tar" "\\(\\.tar|\\.tgz\\|\\.tar\\.gz\\)\\'"))
      (add-to-list 'eshell-output-filter-functions 'eshell-handle-ansi-color)))
 
-(provide 'starter-kit-eshell)
+(provide 'conf/eshell)
 ;;; starter-kit-eshell.el ends here

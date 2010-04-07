@@ -13,5 +13,5 @@
              (?r (file . ,(concat dotfiles-dir "starter-kit-registers.el")))))
   (set-register (car r) (cadr r)))
 
-(provide 'starter-kit-registers)
+(provide 'conf/registers)
 ;;; starter-kit-registers.el ends here

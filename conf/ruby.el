@@ -88,5 +88,5 @@ exec-to-string command, but it works and seems fast"
 ;; TODO: set up ri
 ;; TODO: electric
 
-(provide 'starter-kit-ruby)
+(provide 'conf/ruby)
 ;; starter-kit-ruby.el ends here

@@ -40,5 +40,5 @@
    "Face used to dim parentheses."
    :group 'starter-kit-faces)
 
-(provide 'starter-kit-lisp)
+(provide 'conf/lisp)
 ;; starter-kit-lisp.el ends here

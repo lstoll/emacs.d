@@ -41,14 +41,14 @@
 
 ;; Load up starter kit customizations:
 
-(require 'starter-kit-defuns)
-(require 'starter-kit-bindings)
-(require 'starter-kit-misc)
-(require 'starter-kit-registers)
-(require 'starter-kit-eshell)
-(require 'starter-kit-lisp)
-(require 'starter-kit-ruby)
-(require 'starter-kit-js)
+(require 'conf/starter-kit-defuns)
+(require 'conf/bindings)
+(require 'conf/starter-kit-misc)
+(require 'conf/registers)
+(require 'conf/eshell)
+(require 'conf/lisp)
+(require 'conf/ruby)
+(require 'conf/js)
 
 (regen-autoloads)
 (load custom-file 'noerror)

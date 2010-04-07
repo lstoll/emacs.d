@@ -157,5 +157,5 @@
   (interactive)
   (message (if (y-or-n-p "Do you have a test for that? ") "Good." "Bad!")))
 
-(provide 'starter-kit-defuns)
+(provide 'conf/starter-kit-defuns)
 ;;; starter-kit-defuns.el ends here

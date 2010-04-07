@@ -105,5 +105,5 @@
      (set-face-foreground 'magit-diff-add "green3")
      (set-face-foreground 'magit-diff-del "red3")))
 
-(provide 'starter-kit-misc)
+(provide 'conf/starter-kit-misc)
 ;;; starter-kit-misc.el ends here
