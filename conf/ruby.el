@@ -114,13 +114,13 @@ exec-to-string command, but it works and seems fast"
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/jump"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
 (require 'rinari)
-;(setq
-;      nxhtml-global-minor-mode t
-;      mumamo-chunk-coloring 'submode-colored
-;      nxhtml-skip-welcome t
-;      indent-region-mode t
-;      rng-nxml-auto-validate-flag nil
-;      nxml-degraded t)
+(setq
+      nxhtml-global-minor-mode t
+      mumamo-chunk-coloring 'submode-colored
+      nxhtml-skip-welcome t
+      indent-region-mode t
+      rng-nxml-auto-validate-flag nil
+      nxml-degraded t)
 ; 
 
 (provide 'conf/ruby)

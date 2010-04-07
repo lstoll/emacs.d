@@ -22,3 +22,6 @@
 [submodule "vendor/jump"]
 	path = vendor/jump
 	url = git://github.com/eschulte/jump.el.git
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = git://github.com/defunkt/coffee-mode.git

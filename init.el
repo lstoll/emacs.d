@@ -41,7 +41,7 @@
 (require 'conf/starter-kit-defuns)
 
 ;; Rebuild autoloads and customizations
-(regen-autoloads)
+; TODO - do we need to do this? looks like only for elpa
 (load custom-file 'noerror)
 
 ;; You can keep system-specific customizations here:

@@ -8,6 +8,10 @@
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
 (add-to-list 'auto-mode-alist '("\\.mdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+; erb
 (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
+; coffee
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
 (provide 'conf/fileassoc)

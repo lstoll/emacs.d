@@ -36,5 +36,18 @@
 (setq js2-auto-indent-flag nil)
 (setq javascript-indent-level 2)
 
+; Coffee Script
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/coffee-mode"))
+(require 'coffee-mode)
+
+(defun coffee-custom ()
+  "coffee-mode-hook"
+ (set (make-local-variable 'tab-width) 2))
+
+;(add-hook coffee-mode-hook
+;  '(lambda() (coffee-custom)))
+
+; 
+
 (provide 'conf/js)
 ;;; starter-kit-js.el ends here
