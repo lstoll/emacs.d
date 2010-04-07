@@ -86,7 +86,31 @@ exec-to-string command, but it works and seems fast"
                    (flymake-mode t))))))
 
 ;; TODO: set up ri
-;; TODO: electric
+
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+
+;;
+;;
+;; ruby complexity
+;; ruby-mode
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-complexity"))
+(require 'linum)
+(require 'ruby-complexity)
+(add-hook 'ruby-mode-hook
+          (function (lambda ()
+                      (flymake-mode t)
+                      (linum-mode)
+                      (ruby-complexity-mode)
+                      )))
+
+; Vagrant file is ruby
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
+
+; Ruby flymake
+;(require 'flymake-ruby)
+;(add-hook 'ruby-mode-hook 'flymake-ruby-load)
+
 
 (provide 'conf/ruby)
 ;; starter-kit-ruby.el ends here

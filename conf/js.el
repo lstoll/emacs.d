@@ -30,5 +30,10 @@
      (setq js2-bounce-indent-flag nil
            js2-indent-on-enter-key t)))
 
+
+(setq js2-basic-offset 2)
+(setq js2-auto-indent-flag nil)
+(setq javascript-indent-level 2)
+
 (provide 'conf/js)
 ;;; starter-kit-js.el ends here

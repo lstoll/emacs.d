@@ -87,5 +87,12 @@
     (let ((case-fold-search isearch-case-fold-search))
       (occur (if isearch-regexp isearch-string (regexp-quote isearch-string))))))
 
+; Buffer switching
+(global-set-key [(control shift left)] 'previous-buffer)
+(global-set-key [(control shift right)] 'next-buffer)
+
+; Fullscreen
+(global-set-key (kbd "M-n") 'toggle-fullscreen)
+
 (provide 'conf/bindings)
 ;;; starter-kit-bindings.el ends here

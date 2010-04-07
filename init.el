@@ -14,10 +14,18 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
-(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
-(setq package-user-dir (concat dotfiles-dir "elpa"))
 (setq custom-file (concat dotfiles-dir "custom.el"))
+
+;; Manually set PATH for use by eshell, rspec-mode, etc.
+(let ((path))
+  (setq path (concat "~/.rvm/rubies/ruby-1.9.1-p378/bin/:"
+                     "~/sw/bin:"
+                     "/usr/local/bin:"
+                     "/usr/bin:"
+                     "/bin"))
+  (setenv "PATH" path))
 
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session:
@@ -29,37 +37,38 @@
 (require 'ansi-color)
 (require 'recentf)
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
 (when
     (load
      (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))
 
-;; Load up starter kit customizations:
 
+;; Load starter kit function defs
 (require 'conf/starter-kit-defuns)
+
+;; Rebuild autoloads and customizations
+(regen-autoloads)
+(load custom-file 'noerror)
+
+;; You can keep system-specific customizations here:
+(setq system-specific-config (concat dotfiles-dir system-name ".el"))
+(if (file-exists-p system-specific-config) (load system-specific-config))
+
+;; Load other configs
+(require 'conf/defuns)
+(require 'conf/editing)
 (require 'conf/bindings)
 (require 'conf/starter-kit-misc)
 (require 'conf/registers)
 (require 'conf/eshell)
-(require 'conf/lisp)
+(require 'conf/minormodes)
 (require 'conf/ruby)
 (require 'conf/js)
-
-(regen-autoloads)
-(load custom-file 'noerror)
-
-;; You can keep system- or user-specific customizations here:
-
-(setq system-specific-config (concat dotfiles-dir system-name ".el")
-      user-specific-config (concat dotfiles-dir user-login-name ".el"))
-
-(if (file-exists-p system-specific-config) (load system-specific-config))
-(if (file-exists-p user-specific-config) (load user-specific-config))
+(require 'conf/misc)
+(require 'conf/orgmode)
+(require 'conf/colorthemes)
+(require 'conf/yaml)
+(require 'conf/nxhtml)
 
 (provide 'init)
 ;;; init.el ends here
