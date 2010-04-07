@@ -24,7 +24,7 @@
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
 ; Tabs
-(setq tab-width 4)
+(setq tab-width 2)
 
 ;;; Stefan Monnier <foo at acm.org>. It is the opposite of
 ;;; fill-paragraph. Takes a multi-line paragraph and makes
