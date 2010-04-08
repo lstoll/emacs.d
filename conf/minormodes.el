@@ -26,6 +26,12 @@
         ;;        try-expand-whole-kill
         ))
 
+;; Auto Complete mode
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/auto-complete"))
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories (concat dotfiles-dir "/vendor/auto-complete/dict"))
+(ac-config-default)
+
 ;; textmate mode
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
 (require 'textmate)

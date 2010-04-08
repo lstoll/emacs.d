@@ -94,5 +94,8 @@
 ; Fullscreen
 (global-set-key (kbd "M-n") 'toggle-fullscreen)
 
+; Hippie Expand
+(global-set-key (kbd "M-/") 'hippie-expand)
+
 (provide 'conf/bindings)
 ;;; starter-kit-bindings.el ends here
