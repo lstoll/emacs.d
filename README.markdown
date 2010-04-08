@@ -1,5 +1,6 @@
 # emacs dotfiles
-My emacs config. Once was a starter kit fork, now mostly re-done
+My emacs config. Once was a starter kit fork, now mostly re-done. Used with a HEAD build of 
+emacs 23.2 (see http://github.com/lstoll/emacs)
 
 ## Requirements
 - Requires XML Starlet (http://xmlstar.sourceforge.net/) for XML flymake.

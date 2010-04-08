@@ -56,6 +56,7 @@
 (require 'conf/registers)
 (require 'conf/eshell)
 (require 'conf/ruby)
+(require 'conf/python)
 (require 'conf/hamlsass)
 (require 'conf/js)
 (require 'conf/misc)
