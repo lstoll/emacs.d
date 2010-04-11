@@ -66,7 +66,7 @@
 (require 'conf/nxhtml)
 (require 'conf/fileassoc)
 ; I think this needs to be last, to ensure all deps loaded
-(require 'conf/minormodes)
+(require 'conf/otherloads)
 
 (provide 'init)
 ;;; init.el ends here
