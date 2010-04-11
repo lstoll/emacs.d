@@ -75,4 +75,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
 (require 'rspec-mode)
 
+; eshell version control
+(require 'eshell-vc)
+
 (provide 'conf/otherloads)
