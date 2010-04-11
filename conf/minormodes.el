@@ -57,5 +57,12 @@
 ;; ack
 (require 'ack)
 
+;; markdown
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/markdown-mode"))
+(require 'markdown-mode)
+
+;; textile
+(require 'textile-mode)
+
 (provide 'conf/minormodes)
 ;;; starter-kit-defuns.el ends here

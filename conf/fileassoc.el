@@ -13,5 +13,10 @@
 ; coffee
 (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
 (add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+; markdown
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown" . markdown-mode))
+; textile
+(add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-mode))
 
 (provide 'conf/fileassoc)
