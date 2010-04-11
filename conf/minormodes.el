@@ -64,5 +64,9 @@
 ;; textile
 (require 'textile-mode)
 
+;; jekyll
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/jekyll"))
+(require 'jekyll)
+
 (provide 'conf/minormodes)
 ;;; starter-kit-defuns.el ends here

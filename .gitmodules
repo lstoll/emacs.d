@@ -31,3 +31,6 @@
 [submodule "vendor/markdown-mode"]
 	path = vendor/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule "vendor/jekyll"]
+	path = vendor/jekyll
+	url = git://github.com/diasjorge/jekyll.el.git
