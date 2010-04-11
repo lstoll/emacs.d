@@ -54,6 +54,8 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/magit"))
 (require 'magit)
 
+;; ack
+(require 'ack)
 
 (provide 'conf/minormodes)
 ;;; starter-kit-defuns.el ends here
