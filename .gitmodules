@@ -34,3 +34,6 @@
 [submodule "vendor/jekyll"]
 	path = vendor/jekyll
 	url = git://github.com/diasjorge/jekyll.el.git
+[submodule "vendor/rspec-mode"]
+	path = vendor/rspec-mode
+	url = git://github.com/pezra/rspec-mode.git

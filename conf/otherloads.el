@@ -68,4 +68,11 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/jekyll"))
 (require 'jekyll)
 
+;; mode-compile
+(require 'mode-compile)
+
+;; rspec mode
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
+(require 'rspec-mode)
+
 (provide 'conf/otherloads)
