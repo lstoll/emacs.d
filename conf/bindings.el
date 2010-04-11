@@ -92,7 +92,7 @@
 (global-set-key [(control shift right)] 'next-buffer)
 
 ; Fullscreen
-(global-set-key (kbd "M-n") 'toggle-fullscreen)
+(global-set-key (kbd "M-n") 'ns-toggle-fullscreen)
 
 ; Hippie Expand
 (global-set-key (kbd "M-/") 'hippie-expand)
