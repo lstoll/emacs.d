@@ -37,6 +37,9 @@
 (require 'textmate)
 (textmate-mode)
 
+;; Peepopen
+(require 'peepopen)
+
 ;; load misc modes
 (require 'whitespace)
 
