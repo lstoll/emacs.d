@@ -16,5 +16,9 @@
 ;; Column number in footer
 (column-number-mode 1)
 
+;; When opened via cocoa (i.e drop file on icon, or dbl click)
+;; open in a new window in existing frame, rather than new frame
+(setq ns-pop-up-frames nil)
+
 (provide 'conf/misc)
 ;;; starter-kit-defuns.el ends here
