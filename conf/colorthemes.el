@@ -9,7 +9,7 @@
 (load (concat dotfiles-dir "vendor/color-theme-vibrant-ink/color-theme-vibrant-ink.el"))
 
 ; Load topfuny
-(load (concat dotfiles-dir "vendor/topfunky-theme.el"))
+;(load (concat dotfiles-dir "vendor/topfunky-theme.el"))
 
 ; This all makes sure we load the color theme in gui, and something
 ; nicer in console.
@@ -32,7 +32,7 @@
 (run-after-make-frame-hooks (selected-frame))))
 
 (set-variable 'color-theme-is-global nil)
-(add-hook 'after-make-window-system-frame-hooks 'color-theme-topfunky)
+(add-hook 'after-make-window-system-frame-hooks 'color-theme-vibrant-ink)
 (add-hook 'after-make-console-frame-hooks 'color-theme-tty-dark)
 
 ; set the colors for term
