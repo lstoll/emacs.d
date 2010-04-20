@@ -35,10 +35,12 @@
 ;; textmate mode
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
 (require 'textmate)
-(textmate-mode)
 
 ;; Peepopen
 (require 'peepopen)
+
+;; load textmate mode now, so peepopen hooks can kick in
+(textmate-mode)
 
 ;; load misc modes
 (require 'whitespace)
