@@ -20,5 +20,9 @@
 ;; open in a new window in existing frame, rather than new frame
 (setq ns-pop-up-frames nil)
 
+;; Better kill ring browsing
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings) ; M-y
+
 (provide 'conf/misc)
 ;;; starter-kit-defuns.el ends here
