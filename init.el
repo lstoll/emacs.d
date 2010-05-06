@@ -45,7 +45,7 @@
 
 ;; Set the debug option to enable a backtrace when a
 ;; problem occurs.
-(setq debug-on-error t)
+;(setq debug-on-error t)
 
 ;; You can keep system-specific customizations here:
 (setq system-specific-config (concat dotfiles-dir system-name ".el"))
