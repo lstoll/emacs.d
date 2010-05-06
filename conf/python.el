@@ -13,8 +13,8 @@
 (add-hook 'python-mode-hook 
       (lambda () 
         (unless (eq buffer-file-name nil) (flymake-mode 1)) ;dont invoke flymake on temporary buffers for the interpreter
-        ;(local-set-key [f2] 'flymake-goto-prev-error)
-        ;(local-set-key [f3] 'flymake-goto-next-error)
+        (local-set-key (kbd "C-c d")
+                                  'flymake-display-err-menu-for-current-line)
         ))
 
 
