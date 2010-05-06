@@ -46,7 +46,21 @@
 
   ;; BeanShell
   (setq bsh-jar (concat dotfiles-dir "/vendor/jdee/java/lib/bsh.jar"))
-  (setq jde-compiler '("javac server" ""))
+
+  ;; Compiler
+  ;; The old fashioned normal compiler
+  ;(setq jde-compiler '("javac server" ""))
+  (require 'jde-ecj-flymake)
+  ;; I need to learn elisp then make this work!
+  ;(setq jde-compiler '(("eclipse java compiler server" ((concat dotfiles-dir "/vendor/jdee/java/lib/ecj.jar")) )))
+  (setq jde-compiler '(("eclipse java compiler server" "/Users/lstoll/.emacs.d/vendor/jdee/java/lib/ecj.jar" )))
+  ;; Use this for troubleshooting flymake
+  ;(setq flymake-log-level 3) 
+  (push '(".+\\.java$" 
+            ;jde-ecj-server-flymake-init ;; This is not working - looks like it's parsing the beanshell prompt:
+            jde-ecj-flymake-init 
+              jde-ecj-flymake-cleanup)
+              flymake-allowed-file-name-masks)
 
   )
 

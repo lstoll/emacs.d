@@ -7,3 +7,4 @@ mode-compile.el http://perso.tls.cena.fr/boubaker/distrib/mode-compile.el 201004
 xml-rpc.el Emacs wiki, 20100426
 confluence.el http://code.google.com/p/confluence-el/ 20100426
 jdee - http://github.com/lstoll/jdee (based on trunk 229) 20100506
+jdee/java/lib/ecj.jar - http://archive.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/ 20100506
