@@ -17,8 +17,6 @@
   )
 
 ;; jdee mode
-;;
-;;
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/jdee/lisp"))
 (when (locate-library "jde")
@@ -27,17 +25,17 @@
   (setq auto-mode-alist
         (cons '("\\.java\\'" . jde-mode) auto-mode-alist))
 
-  (setq jde-web-browser "firefox")
+  ;(setq jde-web-browser "firefox")
 
   (add-hook 'jde-mode-hook 'jde-set-variables-init-value)
 
-  ;(setenv "JAVA_HOME" "C:/Program Files/Java/jdk1.6.0_18")
+  ;(setenv "JAVA_HOME" "/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/")
 
-  ;(setq jde-jdk-registry
-  ;      '(("1.6.0_18" . "C:/Program Files/Java/jdk1.6.0_18/")
+  (setq jde-jdk-registry
+        '(("1.6" . "/System/Library/Frameworks/JavaVM.framework/Versions/1.6")))
   ;        ("1.2.2" . "c:/usr/local/share/java/sun/j2se/1.2.2/")))
 
-  ;(setq jde-jdk '("1.6.0_18"))
+  (setq jde-jdk '("1.6"))
 
   ;(setq jde-jdk-doc-url "C:/Program\ Files/Java/jdk1.6.0_18/docs/ja/api/index.html")
 
@@ -48,7 +46,7 @@
 
   ;; BeanShell
   (setq bsh-jar (concat dotfiles-dir "/vendor/jdee/java/lib/bsh.jar"))
-  ;(setq jde-compiler '("javac server" ""))
+  (setq jde-compiler '("javac server" ""))
 
   )
 

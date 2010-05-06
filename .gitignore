@@ -11,3 +11,6 @@ auto-save-list
 
 tramp
 ac-comphist.dat
+
+abbrev_defs
+java
