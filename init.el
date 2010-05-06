@@ -41,8 +41,11 @@
 (require 'conf/starter-kit-defuns)
 
 ;; Rebuild autoloads and customizations
-; TODO - do we need to do this? looks like only for elpa
 (load custom-file 'noerror)
+
+;; Set the debug option to enable a backtrace when a
+;; problem occurs.
+(setq debug-on-error t)
 
 ;; You can keep system-specific customizations here:
 (setq system-specific-config (concat dotfiles-dir system-name ".el"))
@@ -65,6 +68,7 @@
 (require 'conf/yaml)
 (require 'conf/nxhtml)
 (require 'conf/fileassoc)
+(require 'conf/jdee)
 ; I think this needs to be last, to ensure all deps loaded
 (require 'conf/otherloads)
 

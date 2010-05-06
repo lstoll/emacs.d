@@ -4,3 +4,6 @@ js2.el http://code.google.com/p/js2-mode 20090723
 ack.el http://github.com/defunkt/emacs/blob/master/vendor/ack.el 20100411
 textile-mode.el http://dev.nozav.org/scripts/textile-mode.el 10200411
 mode-compile.el http://perso.tls.cena.fr/boubaker/distrib/mode-compile.el 20100411
+xml-rpc.el Emacs wiki, 20100426
+confluence.el http://code.google.com/p/confluence-el/ 20100426
+jdee - http://github.com/lstoll/jdee (based on trunk 229) 20100506
