@@ -63,5 +63,16 @@
               flymake-allowed-file-name-masks)
 
   )
+  ;; Auto start flymake
+  (add-hook 'jde-mode-hook
+               (lambda ()
+                 (when (and buffer-file-name
+                            (file-writable-p
+                             (file-name-directory buffer-file-name))
+                            (file-writable-p buffer-file-name))
+                   (local-set-key (kbd "C-c d")
+                                  'flymake-display-err-menu-for-current-line)
+                   (flymake-mode t))))
+
 
 (provide 'conf/jdee)
