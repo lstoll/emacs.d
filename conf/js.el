@@ -70,6 +70,9 @@
         (back-to-indentation)
         (if (looking-at "case\\s-")
             (setq indentation (+ indentation (/ espresso-indent-level 2))))
+        (if (looking-at "default:")
+            (setq indentation (+ indentation (/ espresso-indent-level 2))))
+        
 
         ;; consecutive declarations in a var statement are nice if
         ;; properly aligned, i.e:
@@ -111,9 +114,9 @@
 
 (defun my-js2-mode-hook ()
   (require 'espresso)
-  (setq espresso-indent-level 8
+  (setq espresso-indent-level 2
         indent-tabs-mode nil
-        c-basic-offset 8)
+        c-basic-offset 2)
   (c-toggle-auto-state 0)
   (c-toggle-hungry-state 1)
   (set (make-local-variable 'indent-line-function) 'my-js2-indent-function)
