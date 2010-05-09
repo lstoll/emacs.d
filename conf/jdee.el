@@ -27,7 +27,8 @@
 
   ;(setq jde-web-browser "firefox")
 
-  (add-hook 'jde-mode-hook 'jde-set-variables-init-value)
+  ;; This breaks flymake - looks like it overwrites project vars
+  ;(add-hook 'jde-mode-hook 'jde-set-variables-init-value)
 
   ;(setenv "JAVA_HOME" "/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/")
 
