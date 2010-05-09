@@ -14,14 +14,17 @@
                                                                      (getenv "HOME2") "/.emacs.d/semanticdb")))
 
   (setq semantic-load-turn-everything-on t)
-  )
+  ) ;; end semantic
 
 ;; jdee mode
 
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/jdee/lisp"))
 (when (locate-library "jde")
 
-  (autoload 'jde-mode "jde" "Java Development Environment for Emacs." t)
+  ;(autoload 'jde-mode "jde" "Java Development Environment for Emacs." t)
+  (require 'jde)
+  (jde-set-variables-init-value)
+
   (setq auto-mode-alist
         (cons '("\\.java\\'" . jde-mode) auto-mode-alist))
 
@@ -74,6 +77,8 @@
                    (local-set-key (kbd "C-c d")
                                   'flymake-display-err-menu-for-current-line)
                    (flymake-mode t))))
+  ;; Doesn't work..
+  ;(setq jde-newline-function '(newline-and-indent))
 
 
 (provide 'conf/jdee)
