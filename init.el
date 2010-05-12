@@ -56,6 +56,7 @@
 (require 'conf/editing)
 (require 'conf/bindings)
 (require 'conf/starter-kit-misc)
+(require 'conf/flymake)
 (require 'conf/registers)
 (require 'conf/eshell)
 (require 'conf/ruby)
@@ -69,6 +70,7 @@
 (require 'conf/nxhtml)
 (require 'conf/fileassoc)
 (require 'conf/jdee)
+(require 'conf/scala)
 ; I think this needs to be last, to ensure all deps loaded
 (require 'conf/otherloads)
 
