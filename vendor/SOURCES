@@ -10,3 +10,4 @@ jdee - http://github.com/lstoll/jdee (based on trunk 229) 20100506
 jdee/java/lib/ecj.jar - http://archive.eclipse.org/eclipse/downloads/drops/R-3.2-200606291905/ 20100506
 espresso.el http://download.savannah.gnu.org/releases-noredirect/espresso/espresso.el 20100508
 scala-mode svn export http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/emacs/ scala-mode 20100511
+diminish.el http://www.eskimo.com/~seldon/diminish.el 20100513

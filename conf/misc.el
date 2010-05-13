@@ -24,5 +24,24 @@
 (require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings) ; M-y
 
+;; Shorter modelines
+(when (require 'diminish nil 'noerror)
+  (eval-after-load "flymake"
+      '(diminish 'flymake-mode "FlM"))
+  (eval-after-load "textmate"
+    '(diminish 'textmate-mode "TM"))
+  (eval-after-load "ruby-electric-mode"
+    '(diminish 'ruby-electric-mode "Elec"))
+;  (eval-after-load "scala-mode-feature-electric"
+;    '(diminish 'scala-electric-mode "Elec")))
+)
+(add-hook 'ruby-mode-hook 
+  (lambda()
+    (setq mode-name "rb"))) 
+
+;(add-hook 'scala-mode-hook 
+;  (lambda()
+;    (setq mode-name "scla"))) 
+
 (provide 'conf/misc)
 ;;; starter-kit-defuns.el ends here
