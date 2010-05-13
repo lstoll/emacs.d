@@ -85,4 +85,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
 (require 'rspec-mode)
 
+;; Javadoc Help
+(require 'javadoc-help)
+
 (provide 'conf/otherloads)
