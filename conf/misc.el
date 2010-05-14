@@ -26,8 +26,9 @@
 
 ;; Shorter modelines
 (when (require 'diminish nil 'noerror)
-  (eval-after-load "flymake"
-      '(diminish 'flymake-mode "FlM"))
+;; Disabling for now, removes the in progress and errors indicators
+;  (eval-after-load "flymake"
+;     '(diminish 'flymake-mode "FlM"))
   (eval-after-load "textmate"
     '(diminish 'textmate-mode "TM"))
   (eval-after-load "ruby-electric-mode"
