@@ -12,3 +12,4 @@ espresso.el http://download.savannah.gnu.org/releases-noredirect/espresso/espres
 scala-mode svn export http://lampsvn.epfl.ch/svn-repos/scala/scala-tool-support/trunk/src/emacs/ scala-mode 20100511
 diminish.el http://www.eskimo.com/~seldon/diminish.el 20100513
 javadoc-help.el http://javadochelp.sourceforge.net/ 20100513
+nxhtml http://ourcomments.org/cgi-bin/emacsw32-dl-latest.pl 20100514
