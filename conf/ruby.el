@@ -106,7 +106,8 @@ exec-to-string command, but it works and seems fast"
       nxhtml-skip-welcome t
       indent-region-mode t
       rng-nxml-auto-validate-flag nil
-      nxml-degraded t)
+)
+      ;      nxml-degraded t)
 ; 
 
 (provide 'conf/ruby)
