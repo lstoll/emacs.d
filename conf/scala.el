@@ -22,7 +22,10 @@
 ;  -mkdir /tmp/twitter-chat-scala-build 2>/dev/null
 ;  fsc -classpath ${HOME}lib/cp1.jar:${HOME}/lib/cp2.jar -sourcepath app -d /tmp/twitter-chat-scala-build ${CHK_SOURCES}
 ;
-(push '(".+\\.scala$" flymake-simple-make-init) flymake-allowed-file-name-masks)
+(push '(".+\\.scala$" flymake-simple-make-init flymake-simple-cleanup flymake-get-real-file-name) flymake-allowed-file-name-masks)
+;; for ant formatted errors
+(push '("^   \\[scalac\\] \\(.*\\):\\([0-9]+\\): error: \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
+(push '("^   \\[fsc\\] \\(.*\\):\\([0-9]+\\): error: \\(.*\\)$" 1 2 nil 3) flymake-err-line-patterns)
 ; Turn on flymake by default for scala
 (add-hook 'scala-mode-hook
 	  (lambda () (flymake-mode-on)))
