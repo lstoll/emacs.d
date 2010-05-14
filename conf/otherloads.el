@@ -31,9 +31,8 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories (concat dotfiles-dir "/vendor/auto-complete/dict"))
 (ac-config-default)
-(setq ac-modes
-      (append ac-modes
-              '(scala-mode)))
+(setq ac-modes (append ac-modes '(scala-mode)))
+(setq ac-modes (append ac-modes '(nxml-mode)))
   
 
 
