@@ -74,6 +74,10 @@
 ; I think this needs to be last, to ensure all deps loaded
 (require 'conf/otherloads)
 
+; Stop debug on error, nxhtml seems to set it and it's annoying. It always triggers
+; for things that should just be a minibuffer item, not a full blown backtrace
+(setq debug-on-error nil)
+
 (provide 'init)
 ;;; init.el ends here
 
