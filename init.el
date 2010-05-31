@@ -69,7 +69,7 @@
 (require 'conf/yaml)
 (require 'conf/nxhtml)
 (require 'conf/fileassoc)
-(require 'conf/jdee)
+;(require 'conf/jdee)
 (require 'conf/scala)
 ; I think this needs to be last, to ensure all deps loaded
 (require 'conf/otherloads)
