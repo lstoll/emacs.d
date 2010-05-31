@@ -33,15 +33,14 @@
 (ac-config-default)
 (setq ac-modes (append ac-modes '(scala-mode)))
 (setq ac-modes (append ac-modes '(nxml-mode)))
-  
-
+(setq ac-modes (append ac-modes '(nxhtml-mode)))
 
 ;; textmate mode
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
 (require 'textmate)
 
 ;; Peepopen
-(require 'peepopen)
+;(require 'peepopen)
 
 ;; load textmate mode now, so peepopen hooks can kick in
 (textmate-mode)
