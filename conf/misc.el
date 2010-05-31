@@ -23,6 +23,8 @@
 ;; Better kill ring browsing
 (require 'browse-kill-ring)
 (browse-kill-ring-default-keybindings) ; M-y
+; when closing, keep same window state
+(setq browse-kill-ring-quit-action 'save-and-restore)
 
 ;; Shorter modelines
 (when (require 'diminish nil 'noerror)
