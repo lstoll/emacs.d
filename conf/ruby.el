@@ -110,5 +110,9 @@ exec-to-string command, but it works and seems fast"
       ;      nxml-degraded t)
 ; 
 
+; Cucumber
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/cucumber"))
+(require 'feature-mode)
+
 (provide 'conf/ruby)
 ;; starter-kit-ruby.el ends here
