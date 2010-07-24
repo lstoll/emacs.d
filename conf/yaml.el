@@ -1,5 +1,5 @@
 ; yaml mode
-(load (concat dotfiles-dir "vendor/yaml-mode/yaml-mode.el"))
+(require 'yaml-mode)
 
 ; Auto indent
 (add-hook 'yaml-mode-hook

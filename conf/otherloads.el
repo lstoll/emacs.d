@@ -1,9 +1,5 @@
 ;;; defuns.el --- Define some custom functions
 
-;; Snippets
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet-0.6.1c"))
-(require 'yasnippet)
-(yas/initialize)
 (yas/load-directory (concat dotfiles-dir "/snippets"))
 
 ;; make hippie expand
@@ -36,10 +32,6 @@
 (setq ac-modes (append ac-modes '(nxhtml-mode)))
 (setq ac-modes (append ac-modes '(haml-mode)))
 
-;; textmate mode
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
-(require 'textmate)
-
 ;; Peepopen
 ;(require 'peepopen)
 
@@ -51,20 +43,6 @@
 
 ;; IMenu support for CC mode
 (require 'cc-menus)
-
-;; Ruby compilation
-(require 'ruby-compilation)
-
-;; GIST
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/gist"))
-(require 'gist)
-
-;; MaGIT
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/magit"))
-(require 'magit)
-
-;; ack
-(require 'ack)
 
 ;; markdown
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/markdown-mode"))
@@ -80,11 +58,6 @@
 ;; mode-compile
 (require 'mode-compile)
 
-;; rspec mode
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
-(require 'rspec-mode)
-
-;; Javadoc Help
 (require 'javadoc-help)
 
 (provide 'conf/otherloads)

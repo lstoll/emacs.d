@@ -1,21 +1,3 @@
-[submodule "vendor/yaml-mode"]
-	path = vendor/yaml-mode
-	url = git://github.com/yoshiki/yaml-mode.git
-[submodule "vendor/textmate"]
-	path = vendor/textmate
-	url = git://github.com/defunkt/textmate.el.git
-[submodule "vendor/ruby-emacs"]
-	path = vendor/ruby-emacs
-	url = git://github.com/smtlaissezfaire/ruby-emacs.git
-[submodule "vendor/gist"]
-	path = vendor/gist
-	url = git://github.com/defunkt/gist.el.git
-[submodule "vendor/magit"]
-	path = vendor/magit
-	url = git://github.com/technomancy/magit.git
-[submodule "vendor/rinari"]
-	path = vendor/rinari
-	url = git://github.com/eschulte/rinari.git
 [submodule "vendor/jump"]
 	path = vendor/jump
 	url = git://github.com/eschulte/jump.el.git
@@ -31,9 +13,6 @@
 [submodule "vendor/jekyll"]
 	path = vendor/jekyll
 	url = git://github.com/diasjorge/jekyll.el.git
-[submodule "vendor/rspec-mode"]
-	path = vendor/rspec-mode
-	url = git://github.com/pezra/rspec-mode.git
 [submodule "vendor/cucumber"]
 	path = vendor/cucumber
 	url = http://github.com/michaelklishin/cucumber.el.git

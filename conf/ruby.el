@@ -2,12 +2,8 @@
 ;;
 ;; Part of the Emacs Starter Kit
 
-;; ruby mode and inf-ruby from ruby svn
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-emacs"))
-
 (eval-after-load 'ruby-mode
   '(progn
-     (require 'ruby-compilation)
      (add-hook 'ruby-mode-hook 'inf-ruby-keys)
      (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
      (define-key ruby-mode-map (kbd "C-M-h") 'backward-kill-word)
@@ -97,16 +93,15 @@ exec-to-string command, but it works and seems fast"
 (add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
 
 ; Rinari
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/jump"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
-(require 'rinari)
-(setq
-      nxhtml-global-minor-mode t
-      mumamo-chunk-coloring 'submode-colored
-      nxhtml-skip-welcome t
-      indent-region-mode t
-      rng-nxml-auto-validate-flag nil
-)
+;(require 'rinari)
+;(setq
+;      nxhtml-global-minor-mode t
+;      mumamo-chunk-coloring 'submode-colored
+;      nxhtml-skip-welcome t
+;      indent-region-mode t
+;      rng-nxml-auto-validate-flag nil
+;)
+;
       ;      nxml-degraded t)
 ; 
 

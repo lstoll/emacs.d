@@ -1,8 +1,5 @@
 ; JavaScript (& Coffee Script)
 
-;; TODO - auto byte-compile-file
-(autoload 'js2-mode "js2" nil t)
-
 (eval-after-load 'js2-mode
   '(progn
 

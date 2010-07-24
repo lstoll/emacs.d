@@ -51,6 +51,12 @@
 (setq system-specific-config (concat dotfiles-dir system-name ".el"))
 (if (file-exists-p system-specific-config) (load system-specific-config))
 
+;;; ELPA
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
+
 ;; Load other configs
 (require 'conf/defuns)
 (require 'conf/editing)
@@ -61,7 +67,6 @@
 (require 'conf/eshell)
 (require 'conf/ruby)
 (require 'conf/python)
-(require 'conf/hamlsass)
 (require 'conf/js)
 (require 'conf/misc)
 (require 'conf/orgmode)
@@ -80,5 +85,3 @@
 
 (provide 'init)
 ;;; init.el ends here
-
-
