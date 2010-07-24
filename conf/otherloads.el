@@ -34,6 +34,7 @@
 (setq ac-modes (append ac-modes '(scala-mode)))
 (setq ac-modes (append ac-modes '(nxml-mode)))
 (setq ac-modes (append ac-modes '(nxhtml-mode)))
+(setq ac-modes (append ac-modes '(haml-mode)))
 
 ;; textmate mode
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/textmate"))
