@@ -72,6 +72,7 @@
 (require 'conf/orgmode)
 (require 'conf/colorthemes)
 (require 'conf/yaml)
+(require 'conf/shell)
 (require 'conf/html)
 (require 'conf/fileassoc)
 ;(require 'conf/jdee)
