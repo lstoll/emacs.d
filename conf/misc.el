@@ -46,5 +46,9 @@
 ;  (lambda()
 ;    (setq mode-name "scla"))) 
 
+; Fix for remote editing with transmit.
+; See http://justinlilly.com/blog/2008/nov/05/emacs-and-transmit-remote-edit-fix/
+(setq backup-by-copying t)
+
 (provide 'conf/misc)
 ;;; starter-kit-defuns.el ends here
