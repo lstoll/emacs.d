@@ -54,8 +54,9 @@
 ;;; ELPA
 (when
     (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
+     (expand-file-name "~/.emacs.d/vendor/elpa/package.el"))
   (package-initialize))
+(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
 
 ;; Load other configs
 (require 'conf/defuns)

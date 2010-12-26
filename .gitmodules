@@ -16,3 +16,6 @@
 [submodule "vendor/cucumber"]
 	path = vendor/cucumber
 	url = http://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/elpa"]
+	path = vendor/elpa
+	url = https://github.com/technomancy/package.el.git
