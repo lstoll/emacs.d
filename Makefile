@@ -2,7 +2,9 @@
 EMACS = emacs
 
 byte-compile:
-		$(EMACS) -Q -L . -batch --eval '(byte-recompile-directory "." 0)'
+		# -Q (q?)
+		#$(EMACS) -L . -batch --eval '(byte-recompile-directory "." 0)'
+		$(EMACS) -l init.el -batch --eval '(byte-recompile-directory "." 0)'
 
 clean:
 		find . -name "*.elc" -exec rm {} \;
