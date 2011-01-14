@@ -56,12 +56,15 @@
     (load
      (expand-file-name "~/.emacs.d/vendor/elpa/package.el"))
   (package-initialize))
-(add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/"))
 (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t) 
 
+;
+(setq viper-custom-file-name "~/.emacs.d/conf/dot-viper.el")
+
 ;; Load other configs
 (require 'conf/defuns)
+(require 'conf/vimpulse)
 (require 'conf/editing)
 (require 'conf/bindings)
 (require 'conf/starter-kit-misc)
