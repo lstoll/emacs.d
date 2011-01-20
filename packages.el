@@ -17,7 +17,8 @@
         (:name textmate
                :type git
                :url "git://github.com/defunkt/textmate.el"
-               :load "textmate.el")
+               :load "textmate.el"
+               :after (lambda() (textmate-mode)))
         (:name rvm
                :type git
                :url "http://github.com/djwhitt/rvm.el.git"
