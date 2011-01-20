@@ -1,25 +1,17 @@
 ;; Emacs Configuration
 
-(push "/usr/local/bin" exec-path)
-
+; Emacs home dir on load path
 (add-to-list 'load-path "~/.emacs.d")
 
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-(setq-default tab-width 2)
-(setq-default indent-tabs-mode nil)
-(setq inhibit-startup-message t)
+; Globals - General global config
+(load "conf/global")
 
-(fset 'yes-or-no-p 'y-or-n-p)
+; Key bindings
+(load "conf/bindings")
 
-(delete-selection-mode t)
-(scroll-bar-mode -1)
-(tool-bar-mode -1)
-(show-paren-mode t)
-(column-number-mode t)
-(set-fringe-style -1)
-(tooltip-mode -1)
+; Packaging - elpa, el-get, etc.
+(load "conf/packaging")
 
-(set-frame-font "Meslo LG M DZ-12")
-(load-theme 'tango-dark)
-
+; Actual package list - hand over, it will load the configs on a per package
+; basis
+(load "packages")
