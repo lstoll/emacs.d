@@ -61,3 +61,7 @@
 
 ; Create them by copying, so transmit can pick up saves.
 (setq backup-by-copying t)
+
+; Line numbers
+(setq linum-format " %d ")
+(global-linum-mode t)
