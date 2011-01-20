@@ -5,4 +5,8 @@ if [ ! -f "$1" ]; then
   touch "$1"
 fi
 
-open -a `brew --prefix emacs`/Emacs.app "$1"
+if [ -e $(brew --prefix --HEAD emacs)/Emacs.app ]; then
+  open -a `brew --prefix --HEAD emacs`/Emacs.app "$1"
+else
+  open -a `brew --prefix emacs`/Emacs.app "$1"
+fi
