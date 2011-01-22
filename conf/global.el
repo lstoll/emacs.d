@@ -65,3 +65,6 @@
 ; Line numbers
 (setq linum-format " %d ")
 (global-linum-mode t)
+
+; Return always indents
+(define-key global-map (kbd "RET") 'newline-and-indent)
