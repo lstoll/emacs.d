@@ -34,7 +34,11 @@
         (:name yaml-mode
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
-               :features yaml-mode)))
+               :features yaml-mode)
+        (:name coffee-mode
+               :type git
+               :url "git://github.com/defunkt/coffee-mode.git"
+               :features coffee-mode)))
 
 ; Do this sync, so required packages are installed and loaded before running
 (el-get 'sync)
