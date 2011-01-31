@@ -10,3 +10,6 @@ elpa
 # Autosaves and Backups
 autosaves
 backups
+
+# Autocomplete history
+ac-comphist.dat

@@ -35,6 +35,11 @@
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
                :features yaml-mode)
+        (:name auto-complete
+               :type git
+               :url "http://cx4a.org/repo/auto-complete.git"
+               :load "auto-complete.el"
+               :after (lambda () (load "conf/auto-complete")))
         (:name coffee-mode
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
