@@ -34,7 +34,8 @@
         (:name yaml-mode
                :type git
                :url "http://github.com/yoshiki/yaml-mode.git"
-               :features yaml-mode)
+               :features yaml-mode
+               :after (lambda() (load "conf/yaml-mode")))
         (:name auto-complete
                :type git
                :url "http://cx4a.org/repo/auto-complete.git"
