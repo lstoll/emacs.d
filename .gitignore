@@ -9,6 +9,7 @@ elpa
 
 # Autosaves and Backups
 autosaves
+auto-save-list
 backups
 
 # Autocomplete history
