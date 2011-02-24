@@ -58,6 +58,10 @@
         (:name paredit
                :type elpa
                :load "paredit.el")
+        (:name python.el
+               :type git
+               :url "https://github.com/fgallina/python.el.git"
+               :after (lambda () (load "conf/python")))
         (:name coffee-mode
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
