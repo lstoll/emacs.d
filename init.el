@@ -3,6 +3,9 @@
 ; Emacs home dir on load path
 (add-to-list 'load-path "~/.emacs.d")
 
+; Start the server
+(server-start)
+
 ; Globals - General global config
 (load "conf/global")
 
