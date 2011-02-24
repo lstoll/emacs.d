@@ -8,10 +8,15 @@
               :after (lambda()
                        (load "conf/dot-viper")
                        (load "conf/vimpulse")))
+        (:name ruby-electric
+               :type elpa)
         (:name ruby-mode
                :type elpa
-               :load "ruby-mode.el")
-        (:name inf-ruby  :type elpa)
+               :load "ruby-mode.el"
+               :after (lambda() (load "conf/ruby")))
+        (:name inf-ruby 
+               :type elpa
+               :load "inf-ruby.el")
         (:name ruby-compilation :type elpa)
         (:name css-mode :type elpa)
         (:name textmate
