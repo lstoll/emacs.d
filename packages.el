@@ -61,6 +61,7 @@
         (:name python.el
                :type git
                :url "https://github.com/fgallina/python.el.git"
+               :load "python.el"
                :after (lambda () (load "conf/python")))
         (:name coffee-mode
                :type git
