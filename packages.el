@@ -66,7 +66,9 @@
         (:name coffee-mode
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
-               :features coffee-mode)))
+               :features coffee-mode)
+        (:name markdown-mode)
+        ))
 
 ; Do this sync, so required packages are installed and loaded before running
 (el-get 'sync)
