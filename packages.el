@@ -14,7 +14,7 @@
                :type elpa
                :load "ruby-mode.el"
                :after (lambda() (load "conf/ruby")))
-        (:name inf-ruby 
+        (:name inf-ruby
                :type elpa
                :load "inf-ruby.el")
         (:name ruby-compilation :type elpa)
@@ -68,6 +68,10 @@
                :url "git://github.com/defunkt/coffee-mode.git"
                :features coffee-mode)
         (:name markdown-mode)
+        (:name scala-mode)
+        (:name textile-mode)
+        (:name haml-mode)
+        (:name sass-mode)
         ))
 
 ; Do this sync, so required packages are installed and loaded before running
