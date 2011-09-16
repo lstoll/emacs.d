@@ -1,13 +1,10 @@
 ;; Contains the list of packages we are using
 
 (setq el-get-sources
-      '((:name vimpulse
-              :type git
-              :url "git://gitorious.org/vimpulse/vimpulse.git"
-              :load "vimpulse.el"
+      '((:name evil
               :after (lambda()
-                       (load "conf/dot-viper")
-                       (load "conf/vimpulse")))
+                        (evil-mode 1)
+                        (setq evil-shift-width 2)))
         (:name ruby-electric
                :type elpa)
         (:name ruby-mode
