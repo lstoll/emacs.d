@@ -74,5 +74,14 @@
         (:name sass-mode)
         ))
 
-; Do this sync, so required packages are installed and loaded before running
-(el-get 'sync)
+
+(setq my-packages
+      (append
+       '(markdown-mode
+         scala-mode
+         textile-mode
+         haml-mode
+         sass-mode)
+       (mapcar 'el-get-source-name el-get-sources)))
+
+(el-get 'sync my-packages)
