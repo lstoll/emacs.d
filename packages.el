@@ -21,12 +21,6 @@
                :url "git://github.com/defunkt/textmate.el"
                :load "textmate.el"
                :after (lambda() (textmate-mode)))
-        (:name rvm
-               :type git
-               :url "http://github.com/djwhitt/rvm.el.git"
-               :load "rvm.el"
-               :compile ("rvm.el")
-               :after (lambda() (rvm-use-default)))
         (:name rhtml
                :type git
                :url "https://github.com/eschulte/rhtml.git"
