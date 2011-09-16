@@ -58,11 +58,10 @@
                :type git
                :url "git://github.com/defunkt/coffee-mode.git"
                :features coffee-mode)
-        (:name markdown-mode)
-        (:name scala-mode)
-        (:name textile-mode)
-        (:name haml-mode)
-        (:name sass-mode)
+        (:name ack-and-a-half
+               :type git
+               :url "https://github.com/jhelwig/ack-and-a-half.git"
+               :load "ack-and-a-half.el")
         ))
 
 
