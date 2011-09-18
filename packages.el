@@ -78,7 +78,9 @@
        '(markdown-mode
          textile-mode
          haml-mode
-         sass-mode)
+         sass-mode
+         magit
+         magithub)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
