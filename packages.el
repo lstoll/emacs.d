@@ -62,13 +62,20 @@
                :type git
                :url "https://github.com/jhelwig/ack-and-a-half.git"
                :load "ack-and-a-half.el")
+        (:name scala-mode)
+        (:name ensime
+               :post-init (lambda ()
+                    (require 'ensime)
+                    ;; scala-mode can be found in the scala distribution:
+                    ; Not needed to require it here - el-get should be
+                    ;(require 'scala-mode-auto)
+                    (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)))
         ))
 
 
 (setq my-packages
       (append
        '(markdown-mode
-         scala-mode
          textile-mode
          haml-mode
          sass-mode)
