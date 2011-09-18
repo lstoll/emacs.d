@@ -69,7 +69,8 @@
                     ;; scala-mode can be found in the scala distribution:
                     ; Not needed to require it here - el-get should be
                     ;(require 'scala-mode-auto)
-                    (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)))
+                    (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+                    (require 'ensime-auto-complete)))
         ))
 
 
