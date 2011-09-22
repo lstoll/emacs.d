@@ -62,6 +62,10 @@
                :type git
                :url "https://github.com/jhelwig/ack-and-a-half.git"
                :load "ack-and-a-half.el")
+        (:name feature-mode
+               :type git
+               :url "https://github.com/michaelklishin/cucumber.el.git"
+               :features feature-mode)
         (:name scala-mode)
         (:name ensime
                :post-init (lambda ()
