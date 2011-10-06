@@ -47,7 +47,7 @@
 (set-default 'fill-column 80)
 
 ; Kill trailing whitespace on save
-(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
+;(add-hook 'before-save-hook (lambda () (delete-trailing-whitespace)))
 
 ; When opening by 'cocoa' (e.g drop on icon) open in existing frame
 (setq ns-pop-up-frames nil)
