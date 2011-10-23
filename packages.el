@@ -66,7 +66,8 @@
                :type git
                :url "https://github.com/michaelklishin/cucumber.el.git"
                :features feature-mode)
-        (:name scala-mode)
+        (:name scala-mode
+               :after (lambda () (load "conf/scala")))
         (:name ensime
                :post-init (lambda ()
                     (require 'ensime)
