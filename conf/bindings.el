@@ -38,3 +38,6 @@
 ; Buffer switching
 (global-set-key [(control shift left)] 'previous-buffer)
 (global-set-key [(control shift right)] 'next-buffer)
+
+;; el-get status
+(global-set-key (kbd "C-x g") 'magit-status)
