@@ -37,18 +37,10 @@
                :url "http://cx4a.org/repo/auto-complete.git"
                :load "auto-complete.el"
                :after (lambda () (load "conf/auto-complete")))
-        ; (:name clojure-mode
-        ;        :type elpa
-        ;        :load "clojure-mode.el")
-        ; (:name slime
-        ;        :type elpa
-        ;        :load "slime.el")
-        ; (:name slime-repl
-        ;        :type elpa
-        ;        :load "slime-repl.el")
-        ; (:name paredit
-        ;        :type elpa
-        ;        :load "paredit.el")
+        (:name clojure-mode
+               :after
+               (lambda () (add-hook 'clojure-mode-hook 'paredit-mode)))
+        (:name paredit)
         (:name python.el
                :type git
                :url "https://github.com/fgallina/python.el.git"
