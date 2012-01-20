@@ -17,3 +17,6 @@ ac-comphist.dat
 
 # Abbreviation definitions
 abbrev_defs
+
+# swank dir
+/swank
