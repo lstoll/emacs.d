@@ -1,11 +1,7 @@
 ;; Contains the list of packages we are using
 
 (setq el-get-sources
-      '((:name evil
-              :after (lambda()
-                        (evil-mode 1)
-                        (setq evil-shift-width 2)))
-        (:name ruby-electric
+      '((:name ruby-electric
                :type elpa)
         (:name ruby-mode
                :type elpa
