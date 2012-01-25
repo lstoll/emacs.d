@@ -73,7 +73,8 @@
          textile-mode
          haml-mode
          sass-mode
-         magit)
+         magit
+         smex)
          ;magithub)
        (mapcar 'el-get-source-name el-get-sources)))
 
