@@ -56,7 +56,8 @@
                :features feature-mode)
         (:name scala-mode
                :after (lambda () (load "conf/scala")))
-        (:name go-mode)
+        (:name go-mode
+               :after (lambda () (load "conf/go")))
         ;(:name ensime
         ;       :post-init (lambda ()
         ;            (require 'ensime)
