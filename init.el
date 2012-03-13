@@ -15,6 +15,9 @@
 ; Packaging - elpa, el-get, etc.
 (load "conf/packaging")
 
+; Shell
+(load "conf/shell")
+
 ; Actual package list - hand over, it will load the configs on a per package
 ; basis
 (load "packages")
