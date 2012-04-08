@@ -66,6 +66,11 @@
         ;            ;(require 'scala-mode-auto)
         ;            (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
         ;            (require 'ensime-auto-complete)))
+        (:name flymake-jslint
+               :type git
+               :url "git://github.com/purcell/flymake-jslint.git"
+               :load "flymake-jslint.el"
+               :after (lambda() (add-hook 'js-mode-hook 'flymake-jslint-load)))
         ))
 
 
