@@ -50,3 +50,7 @@
 
 ;; f7 for shell switching
 (global-set-key [f7] 'alt-shell-dwim)
+
+;; Flymake
+(global-set-key (kbd "C-c d") 'flymake-display-err-menu-for-current-line)
+(global-set-key (kbd "C-c v") 'flymake-goto-next-error)
