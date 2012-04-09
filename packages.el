@@ -71,6 +71,11 @@
                :url "git://github.com/purcell/flymake-jslint.git"
                :load "flymake-jslint.el"
                :after (lambda() (add-hook 'js-mode-hook 'flymake-jslint-load)))
+        (:name flymake-coffee
+               :type git
+               :url "git://github.com/purcell/flymake-coffee.git"
+               :load "flymake-coffee.el"
+               :after (lambda() (add-hook 'coffee-mode-hook 'flymake-coffee-load)))
         ))
 
 
