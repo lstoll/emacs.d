@@ -85,7 +85,8 @@ exec-to-string command, but it works and seems fast"
 
 
 ; ruby electric
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+;; (require 'ruby-electric)
+;; (add-hook 'ruby-mode-hook 'ruby-electric-mode)
 
-
+;; ERB is RHTML
+(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
