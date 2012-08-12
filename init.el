@@ -26,7 +26,14 @@
      (eval-print-last-sexp))))
 
 (el-get 'sync)
+(el-get 'sync)
 
 ; Actual package list - hand over, it will load the configs on a per package
 ; basis
 (load "packages")
+
+;; Various config items. TODO - break these out better
+(load "conf/ruby")
+(textmate-mode)
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(load "conf/python")
