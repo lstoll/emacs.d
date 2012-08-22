@@ -13,8 +13,8 @@
         ;;(:name clojure-mode
         ;;       :after
         ;;       (lambda () (add-hook 'clojure-mode-hook 'paredit-mode)))
-        (:name paredit
-               :url "https://raw.github.com/emacsmirror/paredit/master/paredit.el")
+        ;; (:name paredit
+               ;; :url "https://raw.github.com/emacsmirror/paredit/master/paredit.el")
         ;;(:name python
         ;;       :after (lambda () (load "conf/python")))
         ;;(:name ack-and-a-half
@@ -35,19 +35,24 @@
         ;;       :url "git://github.com/purcell/flymake-coffee.git"
         ;;       :load "flymake-coffee.el"
         ;;       :after (lambda() (add-hook 'coffee-mode-hook 'flymake-coffee-load)))
+        (:name inf-ruby
+               :type git
+               :url "git://github.com/nonsequitur/inf-ruby.git")
+        (:name ruby-electric
+               :type git
+               :url "git://github.com/qoobaa/ruby-electric.git")
         ))
 
 
 (setq my-packages
       (append
        '(
-         ;; ruby-mode
+         ;; ruby-mode ; built-in
          textmate
          clojure-mode
-         ;;paredit
+         paredit
          python
          ;; ruby-electric
-         ;; inf-ruby
          ;; ruby-compilation
          yaml-mode
          css-mode
