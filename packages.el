@@ -69,6 +69,7 @@
          magit
          smex
          rhtml-mode
+         ack
          )
          ;magithub)
        (mapcar 'el-get-source-name el-get-sources)))
