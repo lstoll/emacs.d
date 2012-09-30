@@ -1,5 +1,6 @@
 ; /usr/local at beginning of path
 (push "/usr/local/bin" exec-path)
+(setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 
 ; Tabs are 2 spaces by default
 (setq-default tab-width 2)
