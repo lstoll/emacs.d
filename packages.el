@@ -70,6 +70,8 @@
          smex
          rhtml-mode
          ack
+         ;;rinari ; fails if listed to install.
+         column-marker
          )
          ;magithub)
        (mapcar 'el-get-source-name el-get-sources)))

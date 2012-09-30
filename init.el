@@ -36,3 +36,5 @@
 (textmate-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (load "conf/python")
+
+(add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
