@@ -56,3 +56,15 @@
 
 ;; ERB is RHTML
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
+
+;; PRY is IRB
+;; (add-to-list 'inf-ruby-implementations '("pry" . "pry"))
+;;      (setq inf-ruby-default-implementation "pry")
+;;      (setq inf-ruby-first-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)> *")
+;;      (setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
+
+;; rbenv
+(setq exec-path (cons "~/.rbenv/bin" exec-path))
+(setenv "PATH" (concat "~/.rbenv/bin:" (getenv "PATH")))
+(setq exec-path (cons "~/.rbenv/shims" exec-path))
+(setenv "PATH" (concat "~/.rbenv/shims:" (getenv "PATH")))
