@@ -35,12 +35,20 @@
         ;;       :url "git://github.com/purcell/flymake-coffee.git"
         ;;       :load "flymake-coffee.el"
         ;;       :after (lambda() (add-hook 'coffee-mode-hook 'flymake-coffee-load)))
-        (:name inf-ruby
-               :type git
-               :url "git://github.com/nonsequitur/inf-ruby.git")
-        (:name ruby-electric
-               :type git
-               :url "git://github.com/qoobaa/ruby-electric.git")
+        ;; (:name inf-ruby
+        ;;       :type git
+        ;;       :url "git://github.com/nonsequitur/inf-ruby.git")
+        ;;(:name ruby-electric
+        ;;      :type git
+        ;;       :url "git://github.com/qoobaa/ruby-electric.git")
+        ;; (:name nrepl
+        ;;        :description "An Emacs client for nREPL, the Clojure networked REPL server."
+        ;;        :type git
+        ;;        :url "git://github.com/kingtim/nrepl.el.git"
+        ;;        :depends clojure-mode
+        ;;        :features nrepl
+        ;;        :after (lambda () (add-hook 'nrepl-interaction-mode-hook
+        ;;                                    'nrepl-turn-on-eldoc-mode)))
         ))
 
 
@@ -57,7 +65,7 @@
          yaml-mode
          css-mode
          auto-complete
-         auto-complete-ruby
+         ;; auto-complete-ruby
          ;; ac-python
          ac-slime
          markdown-mode
@@ -72,6 +80,8 @@
          ack
          ;;rinari ; fails if listed to install.
          column-marker
+         nrepl
+         ruby-electric
          )
          ;magithub)
        (mapcar 'el-get-source-name el-get-sources)))
