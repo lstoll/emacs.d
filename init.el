@@ -18,6 +18,8 @@
 ; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
+(setq el-get-user-package-directory "~/.emacs.d/packages.d/")
+
 (unless (require 'el-get nil t)
        (with-current-buffer
            (url-retrieve-synchronously
@@ -33,8 +35,6 @@
 
 ;; Various config items. TODO - break these out better
 (load "conf/ruby")
-(textmate-mode)
-(add-hook 'clojure-mode-hook 'paredit-mode)
 (load "conf/python")
 
 (add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
