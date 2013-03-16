@@ -31,6 +31,10 @@
                :description "Highlighting indentation for Emacs"
                :type github
                :pkgname "antonj/Highlight-Indentation-for-Emacs")
+        (:name ag
+               :description "A simple ag frontend, loosely based on ack-and-half.el"
+               :type github
+               :pkgname "Wilfred/ag.el")
         ))
 
 
