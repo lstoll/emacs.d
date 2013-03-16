@@ -27,6 +27,10 @@
               :pkgname "purcell/ac-nrepl"
               :depends (auto-complete clojure-mode nrepl)
               :features ac-nrepl)
+        (:name highlight-indentation
+               :description "Highlighting indentation for Emacs"
+               :type github
+               :pkgname "antonj/Highlight-Indentation-for-Emacs")
         ))
 
 

@@ -60,3 +60,8 @@
 ;;      (setq inf-ruby-prompt-pattern "^\\[[0-9]+\\] pry\\((.*)\\)[>*\"'] *")
 
 (add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
+
+;; Indentation highlighting
+(add-hook 'ruby-mode-hook (lambda ()
+                            (highlight-indentation-mode)
+                            (highlight-indentation-current-column-mode)))
