@@ -36,3 +36,4 @@
 ;; Various config items. TODO - break these out better
 (load "conf/ruby")
 (load "conf/python")
+(load "conf/tags")

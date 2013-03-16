@@ -54,9 +54,9 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; f7 for shell switching
-(global-set-key [f7] 'alt-shell-dwim)
-
 ;; Flymake
 (global-set-key (kbd "C-c d") 'flymake-display-err-menu-for-current-line)
 (global-set-key (kbd "C-c v") 'flymake-goto-next-error)
+
+;; f7 to rebuild tags
+(global-set-key [f7] '(lambda () (interactive) (find-create-load-tags 1)))
