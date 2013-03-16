@@ -36,5 +36,3 @@
 ;; Various config items. TODO - break these out better
 (load "conf/ruby")
 (load "conf/python")
-
-(add-hook 'ruby-mode-hook (lambda () (interactive) (column-marker-1 80)))
