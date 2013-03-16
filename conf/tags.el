@@ -9,7 +9,7 @@
   "Create tags file"
   (interactive "Directory: ")
   (shell-command
-   (format "%s -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name))))
+   (format "%s --exclude=.bundle --exclude=cache --exclude=tmp --exclude=log -f %s/TAGS -e -R %s" path-to-ctags dir-name (directory-file-name dir-name))))
 
 (defun create-project-tags ()
   "Create TAGS file for the current project (i.e the .hg/.gt level)"
