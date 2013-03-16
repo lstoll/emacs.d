@@ -51,8 +51,8 @@
          ack
          column-marker
          nrepl
-         ruby-electric
          rainbow-delimiters
+         ruby-end
          )
        (mapcar 'el-get-source-name el-get-sources)
        ))

@@ -50,10 +50,6 @@
                    (flymake-mode t))))))
 
 
-; ruby electric
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook 'ruby-electric-mode)
-
 ;; ERB is RHTML
 (add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 

@@ -69,3 +69,6 @@
 
 ; Return always indents
 (define-key global-map (kbd "RET") 'newline-and-indent)
+
+;; Use electric indenation?
+(electric-indent-mode)
