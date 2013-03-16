@@ -53,6 +53,7 @@
          nrepl
          rainbow-delimiters
          ruby-end
+         autopair
          )
        (mapcar 'el-get-source-name el-get-sources)
        ))
