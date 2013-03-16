@@ -5,10 +5,10 @@ if [ ! -f "$1" ]; then
   touch "$1"
 fi
 
-EMACSAPP=$(find `brew --prefix` -name Emacs.app)
+EMACSAPP=/Applications/Emacs.app # $(find `brew --prefix` -name Emacs.app)
 
-if [ -e $(brew --prefix --HEAD emacs)/Emacs.app ]; then
+#if [ -e $(brew --prefix --HEAD emacs)/Emacs.app ]; then
   open -a $EMACSAPP "$1"
-else
-  open -a $EMACSAPP "$1"
-fi
+#else
+#  open -a $EMACSAPP "$1"
+#fi
