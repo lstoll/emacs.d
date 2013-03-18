@@ -49,6 +49,12 @@
                :description "sets the PATH from shell"
                :type elpa
                :pkgname "exec-path-from-shell")
+        (:name go-autocomplete
+               ;; go get -u github.com/nsf/gocode
+               :description "auto complete for go"
+               :type http
+               :depends (auto-complete)
+               :url "https://raw.github.com/nsf/gocode/master/emacs/go-autocomplete.el")
         ))
 
 
