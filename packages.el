@@ -35,6 +35,10 @@
                :description "A simple ag frontend, loosely based on ack-and-half.el"
                :type github
                :pkgname "Wilfred/ag.el")
+        (:name go-mode
+               :description "mode for golang"
+               :type github
+               :pkgname "dominikh/go-mode.el")
         ))
 
 
