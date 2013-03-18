@@ -36,6 +36,7 @@
                :type github
                :pkgname "Wilfred/ag.el")
         (:name go-mode
+               ;; go get -u code.google.com/p/rog-go/exp/cmd/godef
                :description "mode for golang"
                :type github
                :pkgname "dominikh/go-mode.el")
