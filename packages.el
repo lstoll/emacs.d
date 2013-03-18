@@ -45,6 +45,10 @@
                :description "flymake for go"
                :type github
                :pkgname "dougm/goflymake")
+        (:name exec-path-from-shell
+               :description "sets the PATH from shell"
+               :type elpa
+               :pkgname "exec-path-from-shell")
         ))
 
 
