@@ -40,6 +40,11 @@
                :description "mode for golang"
                :type github
                :pkgname "dominikh/go-mode.el")
+        (:name go-flymake
+               ;; go get -u github.com/dougm/goflymake
+               :description "flymake for go"
+               :type github
+               :pkgname "dougm/goflymake")
         ))
 
 
