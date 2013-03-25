@@ -82,3 +82,6 @@
 ;;     (when indent
 ;;       (indent-line-to indent)
 ;;       (when (> offset 0) (forward-char offset)))))
+
+;; try and stop that deep paren shit
+(setq ruby-deep-indent-paren nil)
