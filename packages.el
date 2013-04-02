@@ -82,6 +82,7 @@
          rainbow-delimiters
          ruby-end
          autopair
+         puppet-mode
          )
        (mapcar 'el-get-source-name el-get-sources)
        ))
