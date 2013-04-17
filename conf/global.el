@@ -36,7 +36,10 @@
 (tooltip-mode -1)
 
 ; Decent font choice
-(set-frame-font "Meslo LG M DZ-12")
+(if (string-match "lstoll-mini" (system-name))
+    (progn (set-frame-font "Meslo LG M DZ-10")
+           (set-frame-parameter nil 'fullscreen 'fullboth))
+    (set-frame-font "Meslo LG M DZ-12"))
 
 ; Theme
 (load-theme 'tango-dark)
