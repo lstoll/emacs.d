@@ -15,6 +15,9 @@
 ; Shell
 (load "conf/shell")
 
+;; We need to load flymake early
+(require 'flymake)
+
 ; el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
