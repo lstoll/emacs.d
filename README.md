@@ -6,13 +6,11 @@ For Emacs 24.
 
 ## Requirements
 
-XML Starlet (http://xmlstar.sourceforge.net/) for XML flymake. Download and install using
+Install this
 
-    ./configure `brew diy` && make install && brew link xmlstarlet
-
-Requires pylint, pyflakes, and pep8 for Python flymake.
-
-    pip install pylint && pip install pyflakes && pip install pep8
+    go get -u github.com/nsf/gocode
+    go get -u github.com/dougm/goflymake
+    go get -u code.google.com/p/rog-go/exp/cmd/godef
 
 ## Aliases
 
@@ -23,4 +21,3 @@ Some useful shell aliases
     # Opens file in terminal using existing emacs backend, otherwise starts GUI and opens there.
     # Could modify to be all terminal, but I like my emacs server running in the GUI
     alias et="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -t -a ~/.emacs.d/bin/emacs-gui.sh"
-
