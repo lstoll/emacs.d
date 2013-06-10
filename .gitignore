@@ -20,3 +20,5 @@ abbrev_defs
 
 # swank dir
 /swank
+
+/ido.last
