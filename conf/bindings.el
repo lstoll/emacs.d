@@ -60,3 +60,12 @@
 
 ;; f7 to rebuild tags
 (global-set-key [f7] '(lambda () (interactive) (find-create-load-tags 1)))
+
+;; Deutsch
+(global-set-key (kbd "M-U") (lambda () (interactive) (insert "Ü")))
+(global-set-key (kbd "M-A") (lambda () (interactive) (insert "Ä")))
+(global-set-key (kbd "M-O") (lambda () (interactive) (insert "Ö")))
+(global-set-key (kbd "M-u") (lambda () (interactive) (insert "ü")))
+(global-set-key (kbd "M-a") (lambda () (interactive) (insert "ä")))
+(global-set-key (kbd "M-o") (lambda () (interactive) (insert "ö")))
+(global-set-key (kbd "M-s") (lambda () (interactive) (insert "ß")))
