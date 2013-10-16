@@ -55,6 +55,10 @@
                :type http
                :depends (auto-complete)
                :url "https://raw.github.com/nsf/gocode/master/emacs/go-autocomplete.el")
+        (:name dash-at-point
+               :description "opens dash document viewer for item at point"
+               :type github
+               :pkgname "stanaka/dash-at-point")
         ))
 
 
