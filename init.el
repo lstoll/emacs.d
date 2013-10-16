@@ -40,3 +40,4 @@
 (load "conf/ruby")
 (load "conf/python")
 (load "conf/tags")
+(load "conf/flymake")

@@ -55,7 +55,6 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Flymake
-(global-set-key (kbd "C-c d") 'flymake-display-err-menu-for-current-line)
 (global-set-key (kbd "C-c v") 'flymake-goto-next-error)
 
 ;; f7 to rebuild tags
