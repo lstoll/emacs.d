@@ -4,8 +4,8 @@
 *.elc
 
 # el-get and elpa - managed by el-get and packages.el
-el-get
-elpa
+#el-get
+#elpa
 
 # Autosaves and Backups
 autosaves
