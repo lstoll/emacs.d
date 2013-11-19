@@ -62,7 +62,7 @@
         (:name python
                :type github
                :pkgname "emacsmirror/python-mode"
-               :checksum "977176ebd267c6fbf4698a8f0f86276046e96dca")
+               :checkout "977176ebd267c6fbf4698a8f0f86276046e96dca")
         ))
 
 
