@@ -21,12 +21,12 @@
                :pkgname "auto-complete/fuzzy-el")
 
         ;; Manual import from el-get master
-        (:name ac-nrepl
-               :description "Nrepl completion source for Emacs auto-complete package"
-              :type github
-              :pkgname "purcell/ac-nrepl"
-              :depends (auto-complete clojure-mode nrepl)
-              :features ac-nrepl)
+        ;;(:name ac-nrepl
+        ;;      :description "Nrepl completion source for Emacs auto-complete package"
+        ;;      :type github
+        ;;      :pkgname "purcell/ac-nrepl"
+        ;;      :depends (auto-complete clojure-mode nrepl)
+        ;;      :features ac-nrepl)
         (:name highlight-indentation
                :description "Highlighting indentation for Emacs"
                :type github
@@ -68,7 +68,7 @@
          textmate
          clojure-mode
          paredit
-         python
+         ;; python
          yaml-mode
          css-mode
          auto-complete
@@ -77,12 +77,11 @@
          coffee-mode
          flymake-ruby
          textile-mode
-         magit
+         ;magit
          smex
          rhtml-mode
-         ack
          column-marker
-         nrepl
+         ;; nrepl
          rainbow-delimiters
          ruby-end
          autopair
