@@ -59,6 +59,10 @@
                :description "opens dash document viewer for item at point"
                :type github
                :pkgname "stanaka/dash-at-point")
+        (:name python
+               :type github
+               :pkgname "emacsmirror/python-mode"
+               :checksum "977176ebd267c6fbf4698a8f0f86276046e96dca")
         ))
 
 
