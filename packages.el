@@ -63,6 +63,10 @@
                :type github
                :pkgname "emacsmirror/python-mode"
                :checkout "977176ebd267c6fbf4698a8f0f86276046e96dca")
+        (:name puppet-mode
+               :type github
+               :pkgname "puppetlabs/puppet-syntax-emacs"
+               :checkout "be5d708866947bc3b04c43e3f4c7bb24edfd9aef")
         ))
 
 
@@ -89,7 +93,6 @@
          rainbow-delimiters
          ruby-end
          autopair
-         puppet-mode
          )
        (mapcar 'el-get-source-name el-get-sources)
        ))
