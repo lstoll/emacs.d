@@ -38,7 +38,8 @@
 ; Decent font choice
 ;; (if (string-match "lstoll-mini" (system-name))
 (progn (set-frame-font "Meslo LG M DZ-11")
-       (set-frame-parameter nil 'fullscreen 'fullboth))
+       ;;(set-frame-parameter nil 'fullscreen 'fullboth)
+       )
     ;; (set-frame-font "Meslo LG M DZ-12"))
 
 ; Theme
