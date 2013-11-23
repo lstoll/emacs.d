@@ -3,6 +3,10 @@
 (setq el-get-sources
       '(
         ;; Manual import from the auto-complete, popup and fuzzy.rcp, the repos have moved.
+        (:name dash
+               :type github
+               :pkgname "magnars/dash.el"
+               :checkout "2ee84cbe557adb054fae018aa563ce6604259b21")
         (:name auto-complete
                :website "http://cx4a.org/software/auto-complete/"
                :description "The most intelligent auto-completion extension."
@@ -67,6 +71,15 @@
                :type github
                :pkgname "puppetlabs/puppet-syntax-emacs"
                :checkout "be5d708866947bc3b04c43e3f4c7bb24edfd9aef")
+        (:name enh-ruby-mode
+               :type github
+               :pkgname "zenspider/enhanced-ruby-mode"
+               :checkout "af0d40db655516765e756a2b2385d8c0007a68ac")
+        (:name smartparens
+               :type github
+               :pkgname "Fuco1/smartparens"
+               :checkout "0a8441f60bd98e8e578e82f67c7bfbe573c4476b"
+               :depends dash)
         ))
 
 

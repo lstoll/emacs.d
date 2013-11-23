@@ -37,7 +37,6 @@
 (load "packages")
 
 ;; Various config items. TODO - break these out better
-(load "conf/ruby")
 (load "conf/python")
 (load "conf/tags")
 (load "conf/flymake")
