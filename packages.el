@@ -76,11 +76,9 @@
          textmate
          clojure-mode
          paredit
-         ;; python
          yaml-mode
          css-mode
          auto-complete
-         ;; auto-complete-ruby
          markdown-mode
          coffee-mode
          flymake-ruby
@@ -89,10 +87,6 @@
          smex
          rhtml-mode
          column-marker
-         ;; nrepl
-         rainbow-delimiters
-         ruby-end
-         autopair
          )
        (mapcar 'el-get-source-name el-get-sources)
        ))
