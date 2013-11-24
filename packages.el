@@ -90,7 +90,6 @@
          clojure-mode
          paredit
          yaml-mode
-         css-mode
          auto-complete
          markdown-mode
          coffee-mode
