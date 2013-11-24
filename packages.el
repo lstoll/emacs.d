@@ -51,8 +51,9 @@
                :pkgname "dougm/goflymake")
         (:name exec-path-from-shell
                :description "sets the PATH from shell"
-               :type elpa
-               :pkgname "exec-path-from-shell")
+               :type github
+               :pkgname "purcell/exec-path-from-shell"
+               :checkout "ab268a035a35fcf4db7ab0ed8c104e36759735e0")
         (:name go-autocomplete
                ;; go get -u github.com/nsf/gocode
                :description "auto complete for go"
