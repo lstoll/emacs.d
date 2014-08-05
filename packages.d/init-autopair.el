@@ -1,1 +1,0 @@
-(autopair-global-mode)
