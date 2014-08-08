@@ -27,4 +27,4 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
-;; TODO
+(require 'init-ido)
