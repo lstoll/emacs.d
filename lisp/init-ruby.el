@@ -1,16 +1,18 @@
 ;;; Basic ruby setup
-(require-package 'ruby-mode)
-(require-package 'ruby-hash-syntax)
+(require-package 'enh-ruby-mode)
 
-(add-auto-mode 'ruby-mode
-               "Rakefile\\'" "\\.rake\\'" "\\.rxml\\'"
+(add-auto-mode 'enh-ruby-mode
+               "Rakefile\\'" "\\.rake\\'" "\\.rxml\\'" "\\.rb\\'"
                "\\.rjs\\'" "\\.irbrc\\'" "\\.pryrc\\'" "\\.builder\\'" "\\.ru\\'"
                "\\.gemspec\\'" "Gemfile\\'" "Kirkfile\\'" "Berksfile\\'")
 
-(setq ruby-use-encoding-map nil)
+(setq enh-ruby-program "/usr/bin/ruby")
 
-(after-load 'ruby-mode
-  (define-key ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)
-  (define-key ruby-mode-map (kbd "TAB") 'indent-for-tab-command))
+(add-hook 'enh-ruby-mode-hook (lambda ()
+				;; Always indent on newline
+				(define-key enh-ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)))
+
+(setq enh-ruby-bounce-deep-indent t)
+(setq enh-ruby-hanging-brace-indent-level 2)
 
 (provide 'init-ruby)
