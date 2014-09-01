@@ -34,5 +34,5 @@
 (require 'init-ido)
 (require 'init-solarized)
 (require 'init-smex)
+(require 'init-flycheck)
 (require 'init-ruby)
-
