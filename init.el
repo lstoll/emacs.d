@@ -36,3 +36,4 @@
 (require 'init-smex)
 (require 'init-flycheck)
 (require 'init-ruby)
+(require 'init-auto-complete)
