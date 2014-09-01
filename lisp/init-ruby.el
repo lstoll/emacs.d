@@ -10,7 +10,6 @@
 
 (add-hook 'enh-ruby-mode-hook (lambda ()
 				;; Always indent on newline
-				(flycheck-mode)
 				(define-key enh-ruby-mode-map (kbd "RET") 'reindent-then-newline-and-indent)))
 
 (setq enh-ruby-bounce-deep-indent t)
