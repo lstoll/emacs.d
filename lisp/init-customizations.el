@@ -28,7 +28,10 @@
 (global-set-key "\C-x\ f" 'recentf-ido-find-file)
 
 
+;; There's gotta be a better place for this
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Fuck the menu bar
+(menu-bar-mode -1)
 
 (provide 'init-customizations)
-
-
