@@ -33,7 +33,7 @@
 
 (require 'init-ido)
 (require 'init-solarized)
-(require 'init-smex)
+(require 'init-helm)
 (require 'init-flycheck)
 (require 'init-ruby)
 (require 'init-auto-complete)
