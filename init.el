@@ -15,6 +15,7 @@
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
 (require 'init-utils)
+(require 'init-customizations)
 (require 'init-site-lisp) ;; Must come before elpa, as it may provide package.el
 (require 'init-elpa)      ;; Machinery for installing required packages
 (require 'init-exec-path) ;; Set up $PATH
