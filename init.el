@@ -11,7 +11,7 @@
 (setq custom-file "~/.emacs.d/emacs-custom.el")
 (load custom-file)
 
-(start-server)
+(server-start)
 
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
