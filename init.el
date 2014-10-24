@@ -13,6 +13,8 @@
 
 (server-start)
 
+(load-theme 'tango-dark)
+
 ;;----------------------------------------------------------------------------
 ;; Bootstrap config
 ;;----------------------------------------------------------------------------
@@ -34,7 +36,6 @@
 ;;----------------------------------------------------------------------------
 
 (require 'init-ido)
-(require 'init-solarized)
 (require 'init-helm)
 (require 'init-projectile)
 (require 'init-flycheck)
