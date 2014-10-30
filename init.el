@@ -42,3 +42,4 @@
 (require 'init-ruby)
 (require 'init-auto-complete)
 (require 'init-popwin)
+(require 'init-json)
