@@ -43,3 +43,4 @@
 (require 'init-auto-complete)
 (require 'init-popwin)
 (require 'init-json)
+(require 'init-go)
