@@ -3,9 +3,6 @@
 
 (setq display-buffer-function 'popwin:display-buffer)
 
-(add-to-list 'popwin:special-display-config '("*helm*" :height 20))
-(add-to-list 'popwin:special-display-config '("*helm-mode-execute-extended-command*" :height 20))
-(add-to-list 'popwin:special-display-config '("*helm mini*" :height 20))
-(add-to-list 'popwin:special-display-config '("*helm projectile*" :height 20))
+(push '("^\\*helm" :regexp t :height 20) popwin:special-display-config)
 
 (provide 'init-popwin)
