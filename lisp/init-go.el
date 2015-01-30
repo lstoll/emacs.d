@@ -7,7 +7,7 @@
 (require 'go-autocomplete)
 
 ; Installed by do-setup
-(load-file "/usr/local/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
+(load-file "/Users/lstoll/gocode/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
 
 (defun my-go-mode-hook ()
   ; Use goimports instead of go-fmt
