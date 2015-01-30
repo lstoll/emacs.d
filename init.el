@@ -45,4 +45,5 @@
 (require 'init-json)
 (require 'init-go)
 (require 'init-yaml)
+(require 'init-puppet)
 (require 'init-coffee)
