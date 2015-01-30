@@ -44,3 +44,4 @@
 (require 'init-popwin)
 (require 'init-json)
 (require 'init-go)
+(require 'init-yaml)
