@@ -34,4 +34,7 @@
 ;; Fuck the menu bar
 (menu-bar-mode -1)
 
+;; Always highlight parens
+(show-paren-mode 1)
+
 (provide 'init-customizations)
