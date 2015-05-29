@@ -6,7 +6,7 @@
 
 (require 'go-autocomplete)
 
-; Installed by do-setup
+; Installed by boxen
 (load-file "/Users/lstoll/gocode/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
 
 (defun my-go-mode-hook ()
