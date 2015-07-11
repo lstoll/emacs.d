@@ -26,6 +26,8 @@
 
 (require 'init-keybindings) ;; Set up our keybindings
 
+(require 'init-maxframe) ;; Get that big size
+
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-preload-local.el"
 ;;----------------------------------------------------------------------------
