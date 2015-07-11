@@ -31,10 +31,15 @@
 ;; There's gotta be a better place for this
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; Fuck the menu bar
+;; Fuck GUI shit
 (menu-bar-mode -1)
+(toggle-scroll-bar -1) 
+(tool-bar-mode -1)
 
 ;; Always highlight parens
 (show-paren-mode 1)
+
+;; Show column numbers
+(setq column-number-mode t)
 
 (provide 'init-customizations)
