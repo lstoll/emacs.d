@@ -4,6 +4,11 @@
 
 (helm-mode 1)
 
+(setq helm-recentf-fuzzy-match t
+      helm-buffers-fuzzy-matching t
+      helm-completion-in-region-fuzzy-match t
+      helm-mode-fuzzy-match t)
+
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c t") 'helm-imenu)
