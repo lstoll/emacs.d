@@ -49,3 +49,4 @@
 (require 'init-yaml)
 (require 'init-puppet)
 (require 'init-coffee)
+(require 'init-markdown)
