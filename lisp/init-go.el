@@ -7,7 +7,7 @@
 (require 'go-autocomplete)
 
 ; Installed by boxen
-(load-file "/Users/lstoll/gocode/src/code.google.com/p/go.tools/cmd/oracle/oracle.el")
+(load-file (concat "/Users/" (getenv "USER") "/gocode/src/golang.org/x/tools/cmd/oracle/oracle.el"))
 
 (defun my-go-mode-hook ()
   ; Use goimports instead of go-fmt
@@ -21,7 +21,7 @@
   ; Godef jump key binding
   (local-set-key (kbd "M-.") 'godef-jump))
   ; Go Oracle
-  (go-oracle-mode)
+  ;(go-oracle-mode)
 
   (setq tab-width 4)
 (add-hook 'go-mode-hook 'my-go-mode-hook)
