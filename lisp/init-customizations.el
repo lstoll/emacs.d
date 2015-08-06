@@ -42,4 +42,9 @@
 ;; Show column numbers
 (setq column-number-mode t)
 
+; Use a better unique buffer naming scheme
+(require 'uniquify)
+(setq
+  uniquify-buffer-name-style 'post-forward-angle-brackets)
+
 (provide 'init-customizations)
