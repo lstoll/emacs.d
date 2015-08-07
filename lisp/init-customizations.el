@@ -47,4 +47,6 @@
 (setq
   uniquify-buffer-name-style 'post-forward-angle-brackets)
 
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 (provide 'init-customizations)
