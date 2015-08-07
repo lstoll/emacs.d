@@ -19,11 +19,11 @@
       (set (make-local-variable 'compile-command)
            "go build -v && go test -v && go vet"))
   ; Godef jump key binding
-  (local-set-key (kbd "M-.") 'godef-jump))
+  (local-set-key (kbd "M-.") 'godef-jump)
   ; Go Oracle
   ;(go-oracle-mode)
 
-  (setq tab-width 4)
+  (setq tab-width 4))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 (provide 'init-go)
