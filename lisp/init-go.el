@@ -25,6 +25,8 @@
   ; Go Oracle
   ;(go-oracle-mode)
 
+  ;(highlight-indentation-current-column-mode)
+
   (setq tab-width 4))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 

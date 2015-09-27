@@ -43,6 +43,7 @@
 (require 'init-flycheck)
 (require 'init-yasnippet)
 (require 'init-auto-complete)
+(require 'init-highlight-indentation)
 (require 'init-ruby)
 (require 'init-popwin)
 (require 'init-json)
