@@ -7,4 +7,7 @@
 
 (setq mf-max-width 1600)
 
+(split-window)
+
+
 (provide 'init-maxframe)
