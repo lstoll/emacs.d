@@ -49,4 +49,7 @@
 
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+;; Overrite/delete selected region
+(delete-selection-mode t)
+
 (provide 'init-customizations)
