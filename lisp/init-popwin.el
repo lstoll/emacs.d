@@ -3,7 +3,7 @@
 (require 'popwin)
 (popwin-mode 1)
 
-(setq popwin:popup-window-height 40)
+(setq popwin:popup-window-height 0.4)
 
 (push '("^\*helm.+\*$" :regexp t) popwin:special-display-config)
 
