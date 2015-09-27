@@ -51,3 +51,4 @@
 (require 'init-coffee)
 (require 'init-markdown)
 (require 'init-ag)
+(require 'init-dash-at-point)
