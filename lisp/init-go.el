@@ -28,4 +28,7 @@
   (setq tab-width 4))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
+(setq-default flycheck-go-test-executable "~/.emacs.d/bin/go_godep_shim")
+(setq-default flycheck-go-build-executable "~/.emacs.d/bin/go_godep_shim")
+
 (provide 'init-go)
