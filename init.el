@@ -43,7 +43,7 @@
 (require 'init-flycheck)
 (require 'init-ruby)
 (require 'init-auto-complete)
-(require 'init-shackle)
+(require 'init-popwin)
 (require 'init-json)
 (require 'init-go)
 (require 'init-yaml)
