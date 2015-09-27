@@ -1,6 +1,8 @@
 (require-package 'go-mode)
 (require-package 'go-autocomplete)
 
+(setenv "GOGC" "400")
+
 ; dafuq is up with autoloads?
 (load "go-mode.el")
 
