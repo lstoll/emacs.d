@@ -48,6 +48,7 @@
 (require 'init-popwin)
 (require 'init-json)
 (require 'init-go)
+(require 'init-erlang)
 (require 'init-yaml)
 (require 'init-puppet)
 (require 'init-coffee)
