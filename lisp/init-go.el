@@ -12,20 +12,15 @@
 (load-file (concat "/Users/" (getenv "USER") "/gocode/src/golang.org/x/tools/cmd/oracle/oracle.el"))
 
 (defun my-go-mode-hook ()
-  ; Use goimports instead of go-fmt
+  ;; Use goimports instead of go-fmt
   (setq gofmt-command "goimports")
-  ; Call Gofmt before saving
+  ;; Call Gofmt before saving
   (add-hook 'before-save-hook 'gofmt-before-save)
-  ; Customize compile command to run go build
-  (if (not (string-match "go" compile-command))
-      (set (make-local-variable 'compile-command)
-           "go build -v && go test -v && go vet"))
-  ; Go Oracle
-  ;(go-oracle-mode)
 
-  ;(highlight-indentation-current-column-mode)
+  (setq tab-width 4)
 
-  (setq tab-width 4))
+  (setq ac-sources '(ac-source-go ac-source-yasnippet))
+  )
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 
 (setq-default flycheck-go-test-executable "~/.emacs.d/bin/go_godep_shim")
