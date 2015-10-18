@@ -4,9 +4,10 @@
 (setenv "GOGC" "400")
 
 ; dafuq is up with autoloads?
-(load "go-mode.el")
+;(load "go-mode.el")
 
 (require 'go-autocomplete)
+(setq-default ac-go-expand-arguments-into-snippets t)
 
 ; Installed by boxen
 (load-file (concat "/Users/" (getenv "USER") "/gocode/src/golang.org/x/tools/cmd/oracle/oracle.el"))
