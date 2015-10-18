@@ -10,4 +10,6 @@
 (add-to-list 'ac-modes 'coffee-mode)
 (add-to-list 'ac-modes 'enh-ruby-mode)
 
+(ac-config-default)
+
 (provide 'init-auto-complete)
