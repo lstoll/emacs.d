@@ -33,3 +33,4 @@ site-lisp/package/
 /.smex-items
 /image-dired/
 /projectile-bookmarks.eld
+/recentf
