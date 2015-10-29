@@ -7,7 +7,8 @@
 (setq helm-recentf-fuzzy-match t
       helm-buffers-fuzzy-matching t
       helm-completion-in-region-fuzzy-match t
-      helm-mode-fuzzy-match t)
+      helm-mode-fuzzy-match t
+      helm-buffer-max-length nil)
 
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
