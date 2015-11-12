@@ -14,5 +14,6 @@
 
 (setq enh-ruby-bounce-deep-indent t)
 (setq enh-ruby-hanging-brace-indent-level 2)
+(setq enh-ruby-deep-indent-paren nil)
 
 (provide 'init-ruby)
