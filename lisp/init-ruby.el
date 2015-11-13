@@ -6,7 +6,7 @@
                "\\.rjs\\'" "\\.irbrc\\'" "\\.pryrc\\'" "\\.builder\\'" "\\.ru\\'"
                "\\.gemspec\\'" "Gemfile\\'" "Kirkfile\\'" "Berksfile\\'")
 
-(setq enh-ruby-program "/usr/bin/ruby")
+;(setq enh-ruby-program "/usr/bin/ruby")
 
 (add-hook 'enh-ruby-mode-hook (lambda ()
 				;; Always indent on newline
