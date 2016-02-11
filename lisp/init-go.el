@@ -8,8 +8,8 @@
 (setq-default ac-go-expand-arguments-into-snippets t)
 
 ; Installed by thesetup
-(load-file (concat "/Users/" (getenv "USER") "/gocode/src/golang.org/x/tools/cmd/oracle/oracle.el"))
-(load-file (concat "/Users/" (getenv "USER") "/gocode/src/golang.org/x/tools/refactor/rename/go-rename.el"))
+(load-file (concat "/Users/" (getenv "USER") "/src/golang.org/x/tools/cmd/oracle/oracle.el"))
+(load-file (concat "/Users/" (getenv "USER") "/src/golang.org/x/tools/refactor/rename/go-rename.el"))
 
 (defun my-go-mode-hook ()
   ;; Use goimports instead of go-fmt
